@@ -1,0 +1,1623 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KhanaI Technologies — AI Engineering Company. WinPilot AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.">
+<meta name="keywords" content="KhanaI Technologies, WinPilot AI, TradingX, AI engineering, AI solutions">
+<meta name="author" content="KhanaI Technologies">
+<meta property="og:title" content="KhanaI Technologies | AI Engineering">
+<meta property="og:type" content="website">
+<title>KhanaI Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   CSS VARIABLES - This is how dark mode is done CORRECTLY
+   All colors are variables. Dark mode just overrides variables.
+   ============================================================ */
+:root {
+  --bg:       #ffffff;
+  --bg2:      #f7f7f7;
+  --bg3:      #f0f0f0;
+  --bgCard:   #ffffff;
+  --border:   #e5e5e5;
+  --border2:  #d0d0d0;
+  --text:     #111111;
+  --text2:    #555555;
+  --text3:    #888888;
+  --text4:    #bbbbbb;
+  --navBg:    rgba(255,255,255,0.93);
+  --inputBg:  #f7f7f7;
+  --shadow:   0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+  --shadowHov:0 4px 12px rgba(0,0,0,0.12), 0 16px 40px rgba(0,0,0,0.08);
+  --accent:   #111111;
+  --accentBg: #111111;
+  --accentFg: #ffffff;
+  --green:    #166534;
+  --greenBg:  #f0fdf4;
+  --greenBd:  #bbf7d0;
+  --red:      #991b1b;
+  --redBg:    #fef2f2;
+  --redBd:    #fecaca;
+  --amber:    #92400e;
+  --amberBg:  #fffbeb;
+  --amberBd:  #fde68a;
+  --mockBar:  #f0f0f0;
+  --mockBarBd:#e5e5e5;
+  --mockBbl:  #ffffff;
+  --mockBblBd:#e5e5e5;
+  --mockIn:   #f7f7f7;
+}
+
+[data-theme="dark"] {
+  --bg:       #0a0a0a;
+  --bg2:      #111111;
+  --bg3:      #1a1a1a;
+  --bgCard:   #111111;
+  --border:   #2a2a2a;
+  --border2:  #3a3a3a;
+  --text:     #f0f0f0;
+  --text2:    #a0a0a0;
+  --text3:    #666666;
+  --text4:    #444444;
+  --navBg:    rgba(10,10,10,0.93);
+  --inputBg:  #1a1a1a;
+  --shadow:   0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
+  --shadowHov:0 4px 12px rgba(0,0,0,0.5), 0 16px 40px rgba(0,0,0,0.4);
+  --accent:   #f0f0f0;
+  --accentBg: #f0f0f0;
+  --accentFg: #0a0a0a;
+  --green:    #4ade80;
+  --greenBg:  #052e16;
+  --greenBd:  #14532d;
+  --red:      #f87171;
+  --redBg:    #450a0a;
+  --redBd:    #7f1d1d;
+  --amber:    #fbbf24;
+  --amberBg:  #451a03;
+  --amberBd:  #78350f;
+  --mockBar:  #1a1a1a;
+  --mockBarBd:#2a2a2a;
+  --mockBbl:  #1a1a1a;
+  --mockBblBd:#2a2a2a;
+  --mockIn:   #1a1a1a;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', sans-serif;
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+a { text-decoration: none; color: inherit; }
+button { font-family: 'Inter', sans-serif; cursor: pointer; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  height: 58px;
+  display: flex; align-items: center;
+  background: var(--navBg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.nav-inner {
+  max-width: 1180px; width: 100%; margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.5rem;
+  cursor: pointer; font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--text);
+}
+.nav-logo-k {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--text); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 800; flex-shrink: 0;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 1.75rem; list-style: none;
+}
+.nav-links a, .nav-links span {
+  font-size: 0.84rem; font-weight: 500;
+  color: var(--text2); cursor: pointer; transition: color 0.15s;
+}
+.nav-links a:hover, .nav-links span:hover { color: var(--text); }
+.nav-drop { position: relative; }
+.nav-drop-panel {
+  display: none; position: absolute; top: calc(100% + 10px);
+  left: 50%; transform: translateX(-50%);
+  min-width: 175px; background: var(--bgCard);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 0.35rem; z-index: 9999;
+  box-shadow: var(--shadow);
+}
+.nav-drop:hover .nav-drop-panel { display: block; }
+.nav-drop-panel a, .nav-drop-panel span {
+  display: block; padding: 0.5rem 0.85rem; border-radius: 7px;
+  font-size: 0.82rem; color: var(--text2); cursor: pointer; transition: all 0.15s;
+}
+.nav-drop-panel a:hover, .nav-drop-panel span:hover {
+  background: var(--bg2); color: var(--text);
+}
+.nav-right { display: flex; align-items: center; gap: 0.65rem; }
+.btn-theme {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: none; border: 1px solid var(--border);
+  color: var(--text2); display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; transition: all 0.2s;
+}
+.btn-theme:hover { border-color: var(--border2); color: var(--text); }
+.btn-nav-cta {
+  padding: 0.45rem 1.1rem; border-radius: 7px;
+  background: var(--text); color: var(--bg);
+  font-size: 0.82rem; font-weight: 600; border: none; transition: opacity 0.2s;
+}
+.btn-nav-cta:hover { opacity: 0.85; }
+.btn-mob { display: none; background: none; border: none; color: var(--text); font-size: 1.3rem; }
+
+/* mobile nav */
+.mob-nav {
+  display: none; position: fixed; top: 58px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 1.25rem 1.5rem; z-index: 998;
+}
+.mob-nav.open { display: block; }
+.mob-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.mob-nav li a, .mob-nav li span {
+  font-size: 0.95rem; font-weight: 500; color: var(--text2); cursor: pointer; display: block; padding: 0.3rem 0;
+}
+.mob-nav li a:hover, .mob-nav li span:hover { color: var(--text); }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.78rem 1.65rem; border-radius: 8px;
+  font-size: 0.875rem; font-weight: 600; border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: all 0.18s;
+  letter-spacing: 0.005em;
+}
+.btn-solid {
+  background: var(--text); color: var(--bg);
+}
+.btn-solid:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-ghost {
+  background: transparent; color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { border-color: var(--border2); background: var(--bg2); }
+.btn-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.48rem 0.95rem; border-radius: 7px;
+  background: none; border: 1px solid var(--border);
+  color: var(--text2); font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all 0.18s; margin-bottom: 2.5rem;
+  font-family: 'Inter', sans-serif;
+}
+.btn-back:hover { border-color: var(--border2); color: var(--text); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.page { display: none; }
+.inner { display: none; min-height: 100vh; padding: 6.5rem 1.5rem 5rem; background: var(--bg); }
+.inner.active { display: block; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+section { padding: 6rem 1.5rem; }
+.divider { height: 1px; background: var(--border); max-width: 1180px; margin: 0 auto; }
+
+/* section labels */
+.lbl {
+  font-size: 0.7rem; font-weight: 700; color: var(--text3);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;
+  display: block;
+}
+.sec-h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800; color: var(--text); margin-bottom: 0.85rem;
+}
+.sec-p { font-size: 1rem; color: var(--text2); max-width: 520px; line-height: 1.75; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 8rem 1.5rem 5rem; background: var(--bg);
+}
+.hero-in { max-width: 1180px; margin: 0 auto; width: 100%; text-align: center; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.72rem; font-weight: 600; color: var(--text3);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  animation: rise 0.55s ease both;
+}
+.hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text); flex-shrink: 0; }
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 900; letter-spacing: -0.05em; line-height: 1.0;
+  margin-bottom: 1.5rem;
+  animation: rise 0.58s 0.06s ease both;
+}
+.hero-sub {
+  font-size: clamp(0.97rem, 2vw, 1.18rem);
+  color: var(--text2); max-width: 540px; margin: 0 auto 2.5rem;
+  line-height: 1.75; animation: rise 0.58s 0.12s ease both;
+}
+.hero-btns {
+  display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;
+  animation: rise 0.58s 0.18s ease both; margin-bottom: 2.5rem;
+}
+.hero-pills {
+  display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+  animation: rise 0.58s 0.24s ease both;
+}
+.h-pill {
+  padding: 0.35rem 0.9rem; border: 1px solid var(--border);
+  border-radius: 50px; font-size: 0.78rem; font-weight: 500;
+  color: var(--text2); cursor: pointer; transition: all 0.18s;
+  background: none;
+}
+.h-pill:hover { border-color: var(--border2); color: var(--text); background: var(--bg2); }
+.hero-nums {
+  display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border);
+  animation: rise 0.58s 0.3s ease both;
+}
+.hn-v { font-family: 'Sora', sans-serif; font-size: 2.1rem; font-weight: 900; color: var(--text); letter-spacing: -0.04em; }
+.hn-l { font-size: 0.73rem; color: var(--text3); margin-top: 0.2rem; font-weight: 500; }
+@keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-sec { background: var(--bg2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-text h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1.1rem; }
+.about-text p { color: var(--text2); line-height: 1.8; margin-bottom: 0.85rem; font-size: 0.96rem; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 2rem; }
+.stat-box {
+  padding: 1.25rem; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bgCard); transition: border-color 0.18s;
+}
+.stat-box:hover { border-color: var(--border2); }
+.stat-n { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 900; color: var(--text); letter-spacing: -0.04em; }
+.stat-l { font-size: 0.73rem; color: var(--text3); margin-top: 0.2rem; font-weight: 500; }
+.about-visual {
+  aspect-ratio: 1; border: 1px solid var(--border); border-radius: 14px;
+  background: var(--bgCard); display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.vis-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.vis-ctr { position: relative; z-index: 1; text-align: center; padding: 2rem; }
+.vis-box {
+  width: 64px; height: 64px; border-radius: 14px; background: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--bg); font-family: 'Sora', sans-serif; font-weight: 900; font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
+.vis-ctr h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 0.3rem; }
+.vis-ctr p { font-size: 0.78rem; color: var(--text3); }
+
+/* ============================================================
+   PRODUCTS
+   ============================================================ */
+.products-sec { background: var(--bg); }
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+.prod-card {
+  background: var(--bgCard); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.prod-card:hover {
+  border-color: var(--border2);
+  box-shadow: var(--shadowHov);
+  transform: translateY(-3px);
+}
+.prod-hdr { padding: 1.75rem 1.75rem 1.25rem; }
+.prod-tag { font-size: 0.68rem; font-weight: 700; color: var(--text3); letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.prod-name { font-size: 1.65rem; font-weight: 800; color: var(--text); margin-bottom: 0.45rem; letter-spacing: -0.03em; }
+.prod-desc { font-size: 0.87rem; color: var(--text2); line-height: 1.65; }
+.prod-feats { list-style: none; padding: 1.25rem 1.75rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem; }
+.prod-feats li { font-size: 0.84rem; color: var(--text2); display: flex; align-items: center; gap: 0.55rem; }
+.prod-feats li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--text3); flex-shrink: 0; }
+.prod-pills-row { display: flex; gap: 0.45rem; flex-wrap: wrap; padding: 0.75rem 1.75rem; border-top: 1px solid var(--border); }
+.prod-pill-tag {
+  padding: 0.2rem 0.6rem; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 0.71rem; font-weight: 500; color: var(--text3);
+}
+.prod-ft { padding: 0.85rem 1.75rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.prod-ft-lnk { font-size: 0.82rem; font-weight: 500; color: var(--text3); transition: color 0.15s; }
+.prod-card:hover .prod-ft-lnk { color: var(--text); }
+
+/* ── Window Mockup (display only) ── */
+.mock {
+  margin: 0 1.75rem 1.75rem;
+  border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+}
+.mock-bar {
+  background: var(--mockBar); padding: 0.5rem 0.85rem;
+  display: flex; align-items: center; gap: 0.45rem;
+  border-bottom: 1px solid var(--mockBarBd);
+}
+.m-dot { width: 9px; height: 9px; border-radius: 50%; }
+.mock-title { font-size: 0.66rem; color: var(--text3); margin-left: 0.45rem; font-family: 'Menlo', monospace; }
+.mock-body { padding: 1rem; background: var(--mockIn); }
+.m-msgs { display: flex; flex-direction: column; gap: 0.65rem; }
+.m-msg { display: flex; gap: 0.5rem; align-items: flex-start; }
+.m-msg.r { flex-direction: row-reverse; }
+.m-av {
+  width: 22px; height: 22px; border-radius: 6px;
+  background: var(--text); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.58rem; font-weight: 800; flex-shrink: 0;
+}
+.m-av.u { background: var(--bg3); color: var(--text2); }
+.m-bbl { max-width: 78%; padding: 0.48rem 0.78rem; border-radius: 8px; font-size: 0.76rem; line-height: 1.52; }
+.m-bbl.ai { background: var(--mockBbl); border: 1px solid var(--mockBblBd); color: var(--text); }
+.m-bbl.us { background: var(--text); color: var(--bg); }
+.m-ok {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.32rem 0.62rem; border-radius: 6px;
+  background: var(--greenBg); border: 1px solid var(--greenBd);
+  font-size: 0.69rem; color: var(--green); max-width: 80%;
+}
+.m-ok-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+.m-in {
+  background: var(--bgCard); border: 1px solid var(--border);
+  border-radius: 7px; padding: 0.42rem 0.75rem;
+  display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;
+}
+.m-in span { font-size: 0.69rem; color: var(--text4); flex: 1; font-family: 'Menlo', monospace; }
+.m-foot { display: flex; gap: 1.2rem; margin-top: 0.55rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+.m-foot span { font-size: 0.67rem; color: var(--text4); display: flex; align-items: center; gap: 0.3rem; }
+/* Trading signals */
+.sig { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.62rem; border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.75rem; }
+.sig.b { background: var(--greenBg); border: 1px solid var(--greenBd); }
+.sig.s { background: var(--redBg); border: 1px solid var(--redBd); }
+.sig.h { background: var(--amberBg); border: 1px solid var(--amberBd); }
+.sig-n { font-weight: 700; }
+.sig-n.b { color: var(--green); }
+.sig-n.s { color: var(--red); }
+.sig-n.h { color: var(--amber); }
+.sig-c { color: var(--text3); font-size: 0.7rem; }
+.sig-a { font-weight: 700; font-family: 'Menlo', monospace; font-size: 0.7rem; }
+.sig-a.b { color: var(--green); }
+.sig-a.s { color: var(--red); }
+.sig-a.h { color: var(--amber); }
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services-sec { background: var(--bg2); }
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1.1rem; margin-top: 2.5rem; }
+.svc-card {
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--bgCard); cursor: pointer; transition: all 0.18s;
+}
+.svc-card:hover { border-color: var(--border2); background: var(--bg); box-shadow: var(--shadow); }
+.svc-ico {
+  width: 38px; height: 38px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bgCard);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem; margin-bottom: 1rem;
+}
+.svc-card h3 { font-size: 0.97rem; font-weight: 700; color: var(--text); margin-bottom: 0.45rem; }
+.svc-card p { font-size: 0.84rem; color: var(--text2); line-height: 1.65; }
+.svc-for {
+  display: inline-block; margin-top: 0.85rem;
+  font-size: 0.7rem; font-weight: 500; color: var(--text3);
+  padding: 0.2rem 0.55rem; border: 1px solid var(--border); border-radius: 4px;
+}
+.svc-more { display: block; margin-top: 0.85rem; font-size: 0.8rem; font-weight: 500; color: var(--text3); transition: color 0.15s; }
+.svc-card:hover .svc-more { color: var(--text); }
+
+/* ============================================================
+   INFRA / TRUST
+   ============================================================ */
+.infra-sec { background: var(--bg); }
+.infra-wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+.infra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.infra-card {
+  padding: 1.4rem; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bgCard); transition: border-color 0.18s;
+}
+.infra-card:hover { border-color: var(--border2); }
+.infra-ico { font-size: 1.3rem; margin-bottom: 0.6rem; display: block; }
+.infra-card h4 { font-size: 0.87rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+.infra-card p { font-size: 0.79rem; color: var(--text3); line-height: 1.55; }
+
+/* ============================================================
+   TECH
+   ============================================================ */
+.tech-sec { background: var(--bg2); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 2rem; }
+.chip {
+  padding: 0.42rem 0.95rem; border: 1px solid var(--border);
+  border-radius: 50px; font-size: 0.79rem; font-weight: 500;
+  color: var(--text2); transition: all 0.15s;
+}
+.chip:hover { border-color: var(--border2); color: var(--text); background: var(--bgCard); }
+
+/* ============================================================
+   WHY
+   ============================================================ */
+.why-sec { background: var(--bg); }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 1.1rem; margin-top: 2.5rem; }
+.why-card {
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--bgCard); transition: border-color 0.18s;
+}
+.why-card:hover { border-color: var(--border2); }
+.why-num { font-family: 'Sora', sans-serif; font-size: 1.75rem; font-weight: 900; color: var(--border); margin-bottom: 0.75rem; }
+.why-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+.why-card p { font-size: 0.83rem; color: var(--text2); line-height: 1.65; }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-sec { background: var(--bg2); }
+.ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.ct-info h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 0.85rem; }
+.ct-info p { color: var(--text2); font-size: 0.93rem; line-height: 1.75; margin-bottom: 1.75rem; max-width: 320px; }
+.ct-methods { display: flex; flex-direction: column; gap: 0.75rem; }
+.ct-method {
+  display: flex; align-items: center; gap: 0.85rem;
+  padding: 0.95rem 1.1rem; border: 1px solid var(--border);
+  border-radius: 10px; background: var(--bgCard);
+  text-decoration: none; color: inherit; transition: all 0.18s;
+}
+.ct-method:hover { border-color: var(--border2); box-shadow: var(--shadow); }
+.ct-ico { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+.ct-txt h4 { font-size: 0.84rem; font-weight: 600; color: var(--text); margin-bottom: 0.1rem; }
+.ct-txt p { font-size: 0.78rem; color: var(--text3); }
+.ct-form { display: flex; flex-direction: column; gap: 0.9rem; }
+.f-field label { display: block; font-size: 0.79rem; font-weight: 500; color: var(--text2); margin-bottom: 0.38rem; }
+.f-field input, .f-field textarea {
+  width: 100%; padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--inputBg); color: var(--text);
+  font-family: 'Inter', sans-serif; font-size: 0.875rem;
+  transition: border-color 0.18s; outline: none;
+}
+.f-field input:focus, .f-field textarea:focus { border-color: var(--border2); }
+.f-field textarea { min-height: 120px; resize: vertical; }
+.f-submit {
+  padding: 0.78rem 1.5rem; background: var(--text); color: var(--bg);
+  border: none; border-radius: 8px; font-family: 'Inter', sans-serif;
+  font-size: 0.875rem; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: opacity 0.18s;
+}
+.f-submit:hover { opacity: 0.85; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { background: var(--bg); border-top: 1px solid var(--border); }
+.ft-top { max-width: 1180px; margin: 0 auto; padding: 3.5rem 1.5rem 2.5rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; }
+.ft-logo-row { display: flex; align-items: center; gap: 0.5rem; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.97rem; color: var(--text); cursor: pointer; margin-bottom: 0.75rem; }
+.ft-desc { font-size: 0.81rem; color: var(--text3); line-height: 1.65; max-width: 235px; margin-bottom: 1.1rem; }
+.ft-soc { display: flex; gap: 0.5rem; }
+.ft-sl { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: var(--text3); text-decoration: none; transition: all 0.18s; }
+.ft-sl:hover { border-color: var(--border2); color: var(--text); }
+.ft-col h5 { font-size: 0.69rem; font-weight: 700; color: var(--text3); letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.95rem; }
+.ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.ft-col ul li a, .ft-col ul li span { font-size: 0.83rem; color: var(--text2); cursor: pointer; transition: color 0.15s; }
+.ft-col ul li a:hover, .ft-col ul li span:hover { color: var(--text); }
+.ft-btm { border-top: 1px solid var(--border); padding: 1.2rem 1.5rem; }
+.ft-btm-in { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.ft-btm-in p { font-size: 0.77rem; color: var(--text3); }
+.ft-btm-in span { cursor: pointer; text-decoration: underline; }
+.ft-btm-in span:hover { color: var(--text); }
+
+/* ============================================================
+   INNER PAGE STRUCTURE
+   ============================================================ */
+.pg-top { max-width: 680px; margin: 0 auto 3.5rem; }
+.pg-top .lbl { margin-bottom: 0.65rem; }
+.pg-top h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.9rem; }
+.pg-top p { font-size: 1rem; color: var(--text2); line-height: 1.78; }
+.d-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; margin-bottom: 3rem; }
+.dc {
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--bgCard); transition: border-color 0.18s;
+}
+.dc:hover { border-color: var(--border2); }
+.dc-lbl { font-size: 0.67rem; font-weight: 700; color: var(--text4); letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.6rem; }
+.dc h3 { font-size: 0.97rem; font-weight: 700; color: var(--text); margin-bottom: 0.55rem; }
+.dc p { font-size: 0.84rem; color: var(--text2); line-height: 1.68; }
+.dc ul { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.45rem; }
+.dc ul li { font-size: 0.83rem; color: var(--text2); display: flex; align-items: flex-start; gap: 0.45rem; line-height: 1.5; }
+.dc ul li::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--text3); flex-shrink: 0; margin-top: 0.55rem; }
+.dc-tags { display: flex; flex-wrap: wrap; gap: 0.38rem; margin-top: 0.75rem; }
+.dc-tag { padding: 0.2rem 0.55rem; border: 1px solid var(--border); border-radius: 4px; font-size: 0.71rem; color: var(--text3); }
+.dc-badge {
+  display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.75rem;
+  padding: 0.22rem 0.65rem; border: 1px solid var(--greenBd); border-radius: 4px;
+  font-size: 0.71rem; font-weight: 500; color: var(--green);
+}
+
+/* ============================================================
+   SETTINGS PAGE
+   ============================================================ */
+.st-layout { display: grid; grid-template-columns: 195px 1fr; gap: 1.75rem; max-width: 900px; margin: 0 auto; }
+.st-sidebar {
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 1.1rem; height: fit-content; position: sticky; top: 80px;
+  background: var(--bgCard);
+}
+.st-sidebar h4 { font-size: 0.65rem; font-weight: 700; color: var(--text4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.st-nav-item {
+  display: block; padding: 0.48rem 0.62rem; border-radius: 6px;
+  font-size: 0.82rem; font-weight: 500; color: var(--text2);
+  cursor: pointer; transition: all 0.15s; margin-bottom: 0.15rem;
+}
+.st-nav-item:hover, .st-nav-item.act { background: var(--bg2); color: var(--text); }
+.st-panel { display: flex; flex-direction: column; gap: 1.1rem; }
+.st-group { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bgCard); }
+.st-group-hdr { padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--border); }
+.st-group-hdr h3 { font-size: 0.93rem; font-weight: 700; color: var(--text); margin-bottom: 0.18rem; }
+.st-group-hdr p { font-size: 0.78rem; color: var(--text3); }
+.st-row { display: flex; justify-content: space-between; align-items: center; padding: 0.78rem 1.4rem; border-bottom: 1px solid var(--border); }
+.st-row:last-child { border-bottom: none; }
+.st-row-lbl h5 { font-size: 0.84rem; font-weight: 500; color: var(--text); margin-bottom: 0.1rem; }
+.st-row-lbl p { font-size: 0.75rem; color: var(--text3); }
+.tog {
+  width: 42px; height: 22px; background: var(--border2);
+  border-radius: 50px; position: relative; cursor: pointer;
+  transition: background 0.22s; flex-shrink: 0;
+}
+.tog.on { background: var(--text); }
+.tog::after {
+  content: ''; position: absolute;
+  width: 16px; height: 16px; background: var(--bg);
+  border-radius: 50%; top: 3px; left: 3px; transition: transform 0.22s;
+}
+.tog.on::after { transform: translateX(20px); }
+.st-sel {
+  padding: 0.38rem 0.65rem; border: 1px solid var(--border); border-radius: 7px;
+  background: var(--inputBg); color: var(--text);
+  font-family: 'Inter', sans-serif; font-size: 0.8rem; cursor: pointer; outline: none;
+  transition: border-color 0.18s;
+}
+.st-sel:focus { border-color: var(--border2); }
+
+/* ============================================================
+   PRIVACY PAGE
+   ============================================================ */
+.pv-wrap { max-width: 760px; margin: 0 auto; }
+.pv-intro { padding: 1.5rem; border: 1px solid var(--border); border-radius: 10px; background: var(--bgCard); margin-bottom: 1.4rem; }
+.pv-intro p { font-size: 0.88rem; color: var(--text2); line-height: 1.78; margin-bottom: 0.5rem; }
+.pv-toc { padding: 1.4rem; border: 1px solid var(--border); border-radius: 10px; background: var(--bg2); margin-bottom: 1.75rem; }
+.pv-toc-lbl { font-size: 0.66rem; font-weight: 700; color: var(--text4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; display: block; }
+.pv-toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.38rem; }
+.pv-toc-item { font-size: 0.79rem; color: var(--text3); padding: 0.18rem 0; cursor: pointer; transition: color 0.15s; }
+.pv-toc-item:hover { color: var(--text); }
+.pv-sec { padding: 1.6rem; border: 1px solid var(--border); border-radius: 10px; background: var(--bgCard); margin-bottom: 1.1rem; }
+.pv-sec h3 { font-size: 0.97rem; font-weight: 700; color: var(--text); margin-bottom: 0.82rem; }
+.pv-sec h4 { font-size: 0.84rem; font-weight: 600; color: var(--text2); margin: 0.82rem 0 0.38rem; }
+.pv-sec p { font-size: 0.85rem; color: var(--text2); line-height: 1.78; margin-bottom: 0.5rem; }
+.pv-sec ul { list-style: none; display: flex; flex-direction: column; gap: 0.32rem; margin: 0.38rem 0 0.55rem; }
+.pv-sec ul li { font-size: 0.84rem; color: var(--text2); display: flex; align-items: flex-start; gap: 0.42rem; line-height: 1.52; }
+.pv-sec ul li::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--text3); flex-shrink: 0; margin-top: 0.55rem; }
+.pv-sum { background: var(--bg2); text-align: center; }
+
+/* ============================================================
+   FOUNDER CARD (About page only)
+   ============================================================ */
+.fn-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 2.25rem; margin-top: 1.5rem; background: var(--bgCard);
+  display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start;
+}
+.fn-av {
+  width: 72px; height: 72px; border-radius: 12px;
+  background: var(--text); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; flex-shrink: 0;
+}
+.fn-lbl { font-size: 0.67rem; font-weight: 700; color: var(--text4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.55rem; }
+.fn-name { font-size: 1.45rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
+.fn-role { font-size: 0.76rem; font-weight: 500; color: var(--text3); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.fn-bio { font-size: 0.86rem; color: var(--text2); line-height: 1.78; margin-bottom: 0.55rem; }
+.fn-chips { display: flex; flex-wrap: wrap; gap: 0.38rem; margin-top: 0.85rem; }
+.fn-chip { padding: 0.22rem 0.6rem; border: 1px solid var(--border); border-radius: 4px; font-size: 0.72rem; color: var(--text3); }
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.rv { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.show { opacity: 1; transform: translateY(0); }
+.pg-in { animation: rise 0.32s ease both; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) { .ft-top { grid-template-columns: 1fr 1fr; } .ft-brand { grid-column: 1/-1; } }
+@media (max-width: 920px) { .about-grid, .ct-grid, .fn-card { grid-template-columns: 1fr; } .about-visual { aspect-ratio: auto; height: 280px; } .infra-wrap { grid-template-columns: 1fr; gap: 2.5rem; } .st-layout { grid-template-columns: 1fr; } .st-sidebar { position: static; } }
+@media (max-width: 768px) { .nav-links, .btn-nav-cta { display: none; } .btn-mob { display: block; } section { padding: 4rem 1.5rem; } .hero { padding: 5.5rem 1.5rem 3rem; } .prod-grid, .d-grid, .why-grid { grid-template-columns: 1fr; } .about-stats { grid-template-columns: 1fr 1fr; } .infra-grid { grid-template-columns: 1fr 1fr; } .ft-top { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; gap: 1.5rem; } .ft-btm-in { flex-direction: column; text-align: center; } .ct-grid { grid-template-columns: 1fr; gap: 2.5rem; } .inner { padding: 5.5rem 1.5rem 3.5rem; } }
+@media (max-width: 480px) { .infra-grid { grid-template-columns: 1fr; } .hero-nums { gap: 1.5rem; } }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="go('home')">
+      <div class="nav-logo-k">K</div>
+      KhanaI Technologies
+    </div>
+    <ul class="nav-links">
+      <li><span onclick="go('home')">Home</span></li>
+      <li><span onclick="go('about')">Company</span></li>
+      <li class="nav-drop">
+        <span>Products ▾</span>
+        <div class="nav-drop-panel">
+          <span onclick="go('winpilot')">WinPilot AI</span>
+          <span onclick="go('tradingx')">TradingX</span>
+        </div>
+      </li>
+      <li class="nav-drop">
+        <span>Services ▾</span>
+        <div class="nav-drop-panel">
+          <span onclick="go('service-voice')">Voice Assistants</span>
+          <span onclick="go('service-company-ai')">Company AI</span>
+          <span onclick="go('service-chatbot')">Chatbots</span>
+          <span onclick="go('service-database')">Database AI</span>
+        </div>
+      </li>
+      <li><span onclick="go('tech')">Tech Stack</span></li>
+      <li><span onclick="go('settings')">Settings</span></li>
+      <li><span onclick="go('contact')">Contact</span></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-theme" id="thBtn"><span id="thIco">🌙</span></button>
+      <button class="btn-nav-cta" onclick="go('contact')">Get in touch</button>
+      <button class="btn-mob" id="mobBtn">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <ul>
+    <li><span onclick="go('home')">Home</span></li>
+    <li><span onclick="go('about')">Company</span></li>
+    <li><span onclick="go('winpilot')">WinPilot AI</span></li>
+    <li><span onclick="go('tradingx')">TradingX</span></li>
+    <li><span onclick="go('service-voice')">Voice AI</span></li>
+    <li><span onclick="go('service-company-ai')">Company AI</span></li>
+    <li><span onclick="go('service-chatbot')">Chatbots</span></li>
+    <li><span onclick="go('service-database')">Database AI</span></li>
+    <li><span onclick="go('tech')">Tech Stack</span></li>
+    <li><span onclick="go('settings')">Settings</span></li>
+    <li><span onclick="go('privacy')">Privacy Policy</span></li>
+    <li><span onclick="go('contact')">Contact</span></li>
+  </ul>
+</div>
+
+<!-- ════════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════ -->
+<div id="page-home" class="page">
+
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-tag"><span class="hero-tag-dot"></span> AI Engineering Company</div>
+    <h1>Build with AI.<br>Ship what works.</h1>
+    <p class="hero-sub">KhanaI Technologies engineers production-grade AI systems — WinPilot AI, TradingX, voice automation, company AI, chatbots, and database intelligence.</p>
+    <div class="hero-btns">
+      <button class="btn btn-solid" onclick="go('services')">Explore our work</button>
+      <button class="btn btn-ghost" onclick="go('contact')">Talk to our team</button>
+    </div>
+    <div class="hero-pills">
+      <span class="h-pill" onclick="go('winpilot')">WinPilot AI</span>
+      <span class="h-pill" onclick="go('tradingx')">TradingX</span>
+      <span class="h-pill" onclick="go('service-voice')">Voice AI</span>
+      <span class="h-pill" onclick="go('service-chatbot')">Chatbots</span>
+      <span class="h-pill" onclick="go('service-database')">Database AI</span>
+    </div>
+    <div class="hero-nums">
+      <div><div class="hn-v">2</div><div class="hn-l">Flagship products</div></div>
+      <div><div class="hn-v">~75%</div><div class="hn-l">TradingX accuracy</div></div>
+      <div><div class="hn-v">4+</div><div class="hn-l">AI service areas</div></div>
+      <div><div class="hn-v">100%</div><div class="hn-l">Production-ready</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section class="about-sec" id="about-section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text rv">
+        <span class="lbl">About KhanaI Technologies</span>
+        <h2>AI that ships.<br>Not demos.</h2>
+        <p>KhanaI Technologies is an AI engineering company that designs, builds, and deploys production-grade intelligent systems for businesses worldwide.</p>
+        <p>We build two flagship products — WinPilot AI and TradingX — alongside custom AI services across voice automation, company AI, chatbots, and database intelligence.</p>
+        <div class="about-stats">
+          <div class="stat-box"><div class="stat-n">2</div><div class="stat-l">Flagship products</div></div>
+          <div class="stat-box"><div class="stat-n">~75%</div><div class="stat-l">TradingX accuracy</div></div>
+          <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">AI service areas</div></div>
+          <div class="stat-box"><div class="stat-n">100%</div><div class="stat-l">Client focused</div></div>
+        </div>
+      </div>
+      <div class="about-visual rv">
+        <div class="vis-dots"></div>
+        <div class="vis-ctr">
+          <div class="vis-box">K</div>
+          <h3>KhanaI Technologies</h3>
+          <p>AI Engineering Company</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRODUCTS -->
+<section class="products-sec">
+  <div class="wrap">
+    <span class="lbl rv">Our products</span>
+    <h2 class="sec-h2 rv">Flagship AI systems</h2>
+    <p class="sec-p rv">Two AI products built from the ground up — designed for real-world deployment, tested under real load.</p>
+    <div class="prod-grid">
+
+      <!-- WinPilot AI — display only, NOT functional -->
+      <div class="prod-card rv" onclick="go('winpilot')">
+        <div class="prod-hdr">
+          <div class="prod-tag">Desktop AI · Flagship</div>
+          <div class="prod-name">WinPilot AI</div>
+          <div class="prod-desc">AI-powered Windows assistant. Control your entire system by voice or text — fully local, multi-model, privacy-first.</div>
+        </div>
+        <div class="mock">
+          <div class="mock-bar">
+            <span class="m-dot" style="background:#ff5f57"></span>
+            <span class="m-dot" style="background:#febc2e"></span>
+            <span class="m-dot" style="background:#28c840"></span>
+            <span class="mock-title">WinPilot AI &nbsp;·&nbsp; GPT-4 &nbsp;·&nbsp; Local Mode</span>
+          </div>
+          <div class="mock-body">
+            <div class="m-msgs">
+              <div class="m-msg">
+                <div class="m-av">K</div>
+                <div class="m-bbl ai">Hello — I can control your Windows system by voice or text. What would you like me to do?</div>
+              </div>
+              <div class="m-msg r">
+                <div class="m-av u">U</div>
+                <div class="m-bbl us">Open VS Code and create analysis.py in Documents/Projects</div>
+              </div>
+              <div class="m-msg">
+                <div class="m-av">K</div>
+                <div style="display:flex;flex-direction:column;gap:.38rem;max-width:80%">
+                  <div class="m-bbl ai">Running 3 actions...</div>
+                  <div class="m-ok"><span class="m-ok-dot"></span>VS Code launched · Folder opened · analysis.py created</div>
+                </div>
+              </div>
+            </div>
+            <div class="m-in"><span>Type a command or press mic...</span><span>🎙</span></div>
+            <div class="m-foot">
+              <span><span style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block"></span>GPT-4</span>
+              <span>🔒 Local</span>
+              <span>🎙 Voice ready</span>
+            </div>
+          </div>
+        </div>
+        <ul class="prod-feats">
+          <li>Voice or text — same AI, different input</li>
+          <li>Switch GPT-4, Gemini, Claude on demand</li>
+          <li>Fully local — data never leaves your machine</li>
+          <li>Automate multi-step workflows in one command</li>
+        </ul>
+        <div class="prod-pills-row">
+          <span class="prod-pill-tag">100% Local</span>
+          <span class="prod-pill-tag">3 AI Models</span>
+          <span class="prod-pill-tag">Voice + Text</span>
+        </div>
+        <div class="prod-ft"><span class="prod-ft-lnk">View full details →</span></div>
+      </div>
+
+      <!-- TradingX — display only, NOT functional -->
+      <div class="prod-card rv" onclick="go('tradingx')">
+        <div class="prod-hdr">
+          <div class="prod-tag">AI Trading Agent</div>
+          <div class="prod-name">TradingX</div>
+          <div class="prod-desc">Real-time market intelligence — directional predictions for currencies, gold, and BTC with ~75% accuracy.</div>
+        </div>
+        <div class="mock">
+          <div class="mock-bar">
+            <span class="m-dot" style="background:#ff5f57"></span>
+            <span class="m-dot" style="background:#febc2e"></span>
+            <span class="m-dot" style="background:#28c840"></span>
+            <span class="mock-title">TradingX &nbsp;·&nbsp; Live Signal Feed &nbsp;·&nbsp; 3 Assets</span>
+          </div>
+          <div class="mock-body">
+            <div class="sig b"><span class="sig-n b">↑ EUR/USD</span><span class="sig-c">78% confidence</span><span class="sig-a b">BUY</span></div>
+            <div class="sig s"><span class="sig-n s">↓ XAU/USD</span><span class="sig-c">72% confidence</span><span class="sig-a s">SELL</span></div>
+            <div class="sig h"><span class="sig-n h">→ BTC/USD</span><span class="sig-c">61% confidence</span><span class="sig-a h">HOLD</span></div>
+            <div class="m-ok" style="margin-top:.55rem"><span class="m-ok-dot"></span>Live feed active · Updated 2s ago · ML v2.4</div>
+          </div>
+        </div>
+        <ul class="prod-feats">
+          <li>Live OHLCV data across multiple asset classes</li>
+          <li>ML-powered signals with confidence scores</li>
+          <li>~75% accuracy — decision support, not financial advice</li>
+          <li>Deployable as API or integrated signal service</li>
+        </ul>
+        <div class="prod-pills-row">
+          <span class="prod-pill-tag">~75% Accuracy</span>
+          <span class="prod-pill-tag">Real-Time</span>
+          <span class="prod-pill-tag">Multi-Asset</span>
+        </div>
+        <div class="prod-ft"><span class="prod-ft-lnk">View full details →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="services-sec" id="services-section">
+  <div class="wrap">
+    <span class="lbl rv">Services</span>
+    <h2 class="sec-h2 rv">Custom AI for your business</h2>
+    <p class="sec-p rv">We design and deploy tailored AI systems for real operational problems.</p>
+    <div class="svc-grid">
+      <div class="svc-card rv" onclick="go('service-voice')">
+        <div class="svc-ico">🎙</div>
+        <h3>AI Voice Assistants</h3>
+        <p>Custom voice-driven AI that takes verbal commands and automates workflows completely hands-free.</p>
+        <div class="svc-for">Businesses &amp; Enterprises</div>
+        <span class="svc-more">Learn more →</span>
+      </div>
+      <div class="svc-card rv" onclick="go('service-company-ai')">
+        <div class="svc-ico">🏢</div>
+        <h3>Company AI</h3>
+        <p>Private AI trained entirely on your company's documents, policies, and knowledge base.</p>
+        <div class="svc-for">Startups &amp; Growing Teams</div>
+        <span class="svc-more">Learn more →</span>
+      </div>
+      <div class="svc-card rv" onclick="go('service-chatbot')">
+        <div class="svc-ico">💬</div>
+        <h3>Automation Chatbots</h3>
+        <p>WhatsApp and web bots capturing leads, booking appointments, and handling queries 24/7.</p>
+        <div class="svc-for">Small Businesses</div>
+        <span class="svc-more">Learn more →</span>
+      </div>
+      <div class="svc-card rv" onclick="go('service-database')">
+        <div class="svc-ico">🗄</div>
+        <h3>AI Database Managers</h3>
+        <p>Ask your database in plain English — instant SQL, automated reports, scheduled insights.</p>
+        <div class="svc-for">Data Teams &amp; Ops</div>
+        <span class="svc-more">Learn more →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INFRA -->
+<section class="infra-sec">
+  <div class="wrap">
+    <div class="infra-wrap">
+      <div class="rv">
+        <span class="lbl">Architecture</span>
+        <h2 class="sec-h2" style="font-size:clamp(1.7rem,3vw,2.4rem)">Built to enterprise<br>standards</h2>
+        <p class="sec-p" style="font-size:.92rem;margin-top:.85rem">Every system we ship is secure, locally deployable, and tested under real-world conditions.</p>
+      </div>
+      <div class="infra-grid rv">
+        <div class="infra-card"><span class="infra-ico">🔐</span><h4>Secure by default</h4><p>AES encryption, HTTPS everywhere, zero sensitive data on our servers.</p></div>
+        <div class="infra-card"><span class="infra-ico">🏠</span><h4>Local-first</h4><p>Systems run on your hardware by default. Cloud sync is optional and encrypted.</p></div>
+        <div class="infra-card"><span class="infra-ico">🔀</span><h4>Multi-model</h4><p>GPT-4, Gemini, Claude, or local models — switch freely per use case.</p></div>
+        <div class="infra-card"><span class="infra-ico">🚀</span><h4>Production-ready</h4><p>Tested under real load. Not prototypes, not demos — deployed systems.</p></div>
+        <div class="infra-card"><span class="infra-ico">☁️</span><h4>Cloud-optional</h4><p>Supabase-powered sync available — always opt-in, always encrypted.</p></div>
+        <div class="infra-card"><span class="infra-ico">🌍</span><h4>Remote-first</h4><p>Deployed and supported globally. No on-site requirements.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TECH STACK -->
+<section class="tech-sec">
+  <div class="wrap">
+    <span class="lbl rv">Technology</span>
+    <h2 class="sec-h2 rv">Our stack</h2>
+    <p class="sec-p rv">Battle-tested tools powering every system we build.</p>
+    <div class="chips rv">
+      <span class="chip">Python</span><span class="chip">GPT-4 (OpenAI)</span><span class="chip">Gemini (Google)</span>
+      <span class="chip">Claude (Anthropic)</span><span class="chip">LangChain</span><span class="chip">Whisper STT</span>
+      <span class="chip">Supabase</span><span class="chip">FastAPI</span><span class="chip">Docker</span>
+      <span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span><span class="chip">PostgreSQL</span>
+      <span class="chip">Pinecone</span><span class="chip">RAG Pipelines</span><span class="chip">Pandas / NumPy</span>
+      <span class="chip">LSTM</span><span class="chip">PyAutoGUI</span><span class="chip">Vosk (Offline STT)</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY -->
+<section class="why-sec">
+  <div class="wrap">
+    <span class="lbl rv">Why KhanaI</span>
+    <h2 class="sec-h2 rv">The right choice for serious AI work</h2>
+    <div class="why-grid">
+      <div class="why-card rv"><div class="why-num">01</div><h3>Ships working products</h3><p>WinPilot AI and TradingX are live, deployed products — not demos or prototypes.</p></div>
+      <div class="why-card rv"><div class="why-num">02</div><h3>Privacy by design</h3><p>Local-first execution. Your data stays on your hardware unless you explicitly choose otherwise.</p></div>
+      <div class="why-card rv"><div class="why-num">03</div><h3>No outsourcing</h3><p>You work directly with our engineering team — no agencies, no middlemen, no delays.</p></div>
+      <div class="why-card rv"><div class="why-num">04</div><h3>Model flexibility</h3><p>Not locked to one AI provider — GPT-4, Gemini, Claude, or local models per use case.</p></div>
+      <div class="why-card rv"><div class="why-num">05</div><h3>Real-world tested</h3><p>Every system tested under actual load before shipping — not just benchmarked.</p></div>
+      <div class="why-card rv"><div class="why-num">06</div><h3>Full-stack delivery</h3><p>Models, APIs, UIs, deployment — complete AI solutions from one team.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-sec">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div class="rv">
+        <span class="lbl">Contact</span>
+        <h2 class="ct-info">Let's build<br>something.</h2>
+        <p>Have a project? Want to learn more about WinPilot AI or TradingX? Reach out.</p>
+        <div class="ct-methods">
+          <a href="https://wa.me/916303716492" target="_blank" class="ct-method">
+            <div class="ct-ico">📱</div><div class="ct-txt"><h4>WhatsApp</h4><p>+91 6303716492</p></div>
+          </a>
+          <a href="mailto:khurramkhan9177@gmail.com" class="ct-method">
+            <div class="ct-ico">✉️</div><div class="ct-txt"><h4>Email</h4><p>khurramkhan9177@gmail.com</p></div>
+          </a>
+          <div class="ct-method">
+            <div class="ct-ico">🌍</div><div class="ct-txt"><h4>Location</h4><p>Worldwide · Remote-first</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="rv">
+        <form class="ct-form" id="cf1">
+          <div class="f-field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
+          <div class="f-field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div>
+          <div class="f-field"><label>Message</label><textarea name="message" required placeholder="Tell us about your project..."></textarea></div>
+          <button type="submit" class="f-submit">Send message <span>→</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <div class="ft-logo-row" onclick="go('home')">
+        <div class="nav-logo-k">K</div>
+        KhanaI Technologies
+      </div>
+      <p class="ft-desc">AI engineering company — WinPilot AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.</p>
+      <div class="ft-soc">
+        <a href="#" class="ft-sl">in</a>
+        <a href="#" class="ft-sl">gh</a>
+        <a href="#" class="ft-sl">𝕏</a>
+        <a href="mailto:khurramkhan9177@gmail.com" class="ft-sl">@</a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h5>Company</h5>
+      <ul>
+        <li><span onclick="go('about')">About us</span></li>
+        <li><span onclick="go('tech')">Tech stack</span></li>
+        <li><span onclick="go('contact')">Contact</span></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Products</h5>
+      <ul>
+        <li><span onclick="go('winpilot')">WinPilot AI</span></li>
+        <li><span onclick="go('tradingx')">TradingX</span></li>
+        <li><span onclick="go('service-voice')">Voice AI</span></li>
+        <li><span onclick="go('service-chatbot')">Chatbots</span></li>
+        <li><span onclick="go('service-database')">Database AI</span></li>
+        <li><span onclick="go('settings')">Settings Demo</span></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><span onclick="go('privacy')">Privacy Policy</span></li>
+        <li><span onclick="go('contact')">Terms of Service</span></li>
+        <li><span onclick="go('contact')">Report an issue</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-btm">
+    <div class="ft-btm-in">
+      <p>© 2026 KhanaI Technologies. All rights reserved.</p>
+      <p>Developed by <strong>Shamsheer Khan Khurrum</strong> &nbsp;·&nbsp; <span onclick="go('privacy')">Privacy Policy</span></p>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /page-home -->
+
+<!-- ════════ WINPILOT ════════ -->
+<div id="page-winpilot" class="inner">
+  <div class="wrap">
+    <button class="btn-back" onclick="go('home')">← Back</button>
+    <div class="pg-top">
+      <span class="lbl">Desktop AI · Flagship Product</span>
+      <h1>WinPilot AI</h1>
+      <p>An AI-powered Windows assistant that operates your entire system — apps, files, settings, and workflows — by voice or typed commands. Fully local. Multi-model. Privacy-first.</p>
+    </div>
+    <!-- Extended display mockup — visual only, not functional -->
+    <div style="max-width:740px;margin:0 auto 3rem;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)">
+      <div style="background:var(--mockBar);padding:.55rem .9rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--mockBarBd)">
+        <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block"></span>
+        <span style="font-size:.67rem;color:var(--text3);margin-left:.5rem;font-family:Menlo,monospace">WinPilot AI &nbsp;·&nbsp; Active: GPT-4 &nbsp;·&nbsp; 🔒 Local Mode</span>
+      </div>
+      <div style="padding:1.35rem;background:var(--mockIn)">
+        <div style="display:flex;flex-direction:column;gap:.7rem">
+          <div style="display:flex;gap:.5rem;align-items:flex-start">
+            <div style="width:22px;height:22px;border-radius:6px;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:800;flex-shrink:0">K</div>
+            <div style="background:var(--mockBbl);border:1px solid var(--mockBblBd);border-radius:8px;padding:.5rem .82rem;font-size:.79rem;color:var(--text);line-height:1.55;max-width:80%">Hello — I can control your Windows system. What would you like me to do today?</div>
+          </div>
+          <div style="display:flex;gap:.5rem;align-items:flex-start;flex-direction:row-reverse">
+            <div style="width:22px;height:22px;border-radius:6px;background:var(--bg3);color:var(--text2);display:flex;align-items:center;justify-content:center;font-size:.58rem;flex-shrink:0">U</div>
+            <div style="background:var(--text);color:var(--bg);border-radius:8px;padding:.5rem .82rem;font-size:.79rem;max-width:76%">Open Visual Studio Code and create analysis.py in Documents/Projects folder</div>
+          </div>
+          <div style="display:flex;gap:.5rem;align-items:flex-start">
+            <div style="width:22px;height:22px;border-radius:6px;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:800;flex-shrink:0">K</div>
+            <div style="display:flex;flex-direction:column;gap:.38rem;max-width:82%">
+              <div style="background:var(--mockBbl);border:1px solid var(--mockBblBd);border-radius:8px;padding:.5rem .82rem;font-size:.79rem;color:var(--text)">Executing 3 actions now...</div>
+              <div style="background:var(--greenBg);border:1px solid var(--greenBd);border-radius:7px;padding:.38rem .7rem;font-size:.72rem;color:var(--green);display:flex;align-items:center;gap:.42rem">
+                <span style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block;flex-shrink:0"></span>
+                VS Code launched ✓ &nbsp;·&nbsp; Documents/Projects opened ✓ &nbsp;·&nbsp; analysis.py created ✓
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bgCard);border:1px solid var(--border);border-radius:7px;padding:.42rem .78rem;display:flex;align-items:center;gap:.5rem;margin-top:.65rem">
+          <span style="font-size:.71rem;color:var(--text4);flex:1;font-family:Menlo,monospace">Type a command or press mic to speak...</span>
+          <span style="font-size:.95rem">🎙</span>
+        </div>
+        <div style="display:flex;gap:1.4rem;margin-top:.6rem;padding-top:.5rem;border-top:1px solid var(--border)">
+          <span style="font-size:.7rem;color:var(--text4);display:flex;align-items:center;gap:.3rem"><span style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block"></span>GPT-4 active</span>
+          <span style="font-size:.7rem;color:var(--text4)">🔒 Local mode</span>
+          <span style="font-size:.7rem;color:var(--text4)">🎙 Voice ready</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid">
+      <div class="dc"><div class="dc-lbl">Core function</div><h3>What WinPilot AI does</h3><p>Translates natural language — spoken or typed — into Windows system actions. Open apps, manage files, adjust settings, automate workflows. No traditional UI needed.</p></div>
+      <div class="dc"><div class="dc-lbl">Interaction modes</div><h3>Voice &amp; Typing</h3><ul><li>Voice mode — hands-free, speak commands naturally</li><li>Typing mode — type in plain English, fast and silent</li><li>Both modes share the same AI engine and capabilities</li></ul></div>
+      <div class="dc"><div class="dc-lbl">AI models</div><h3>Multi-model engine</h3><ul><li>GPT-4 — deep reasoning, complex task planning</li><li>Gemini — fast, multi-modal tasks</li><li>Claude — precise instruction-following</li><li>Local LLM — full offline operation, zero internet</li></ul></div>
+      <div class="dc"><div class="dc-lbl">Capabilities</div><h3>System control</h3><ul><li>Open, close, switch between applications</li><li>Create, move, rename, delete files &amp; folders</li><li>Adjust volume, display, network settings</li><li>Automate multi-step workflows in one command</li><li>Schedule tasks and set reminders by voice</li></ul></div>
+      <div class="dc"><div class="dc-lbl">Technology</div><h3>Built with</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">OpenAI API</span><span class="dc-tag">Gemini API</span><span class="dc-tag">Claude API</span><span class="dc-tag">Whisper STT</span><span class="dc-tag">Windows COM</span><span class="dc-tag">PyAutoGUI</span><span class="dc-tag">LangChain</span></div></div>
+      <div class="dc"><div class="dc-lbl">Privacy</div><h3>Local execution</h3><p>Core system runs locally on your machine. API calls only when using cloud models — replaceable with local LLMs for full offline operation. No usage data sent to our servers.</p><div class="dc-badge">Local / Hybrid deployment</div></div>
+    </div>
+    <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Get WinPilot AI →</button></div>
+  </div>
+</div>
+
+<!-- ════════ TRADINGX ════════ -->
+<div id="page-tradingx" class="inner">
+  <div class="wrap">
+    <button class="btn-back" onclick="go('home')">← Back</button>
+    <div class="pg-top">
+      <span class="lbl">AI Trading Agent</span>
+      <h1>TradingX</h1>
+      <p>An AI agent that ingests real-time market data and generates directional predictions for currencies, gold, and Bitcoin — approximately 75% accuracy. ML models and automated data pipelines.</p>
+    </div>
+    <div class="d-grid">
+      <div class="dc"><div class="dc-lbl">Core function</div><h3>What TradingX does</h3><p>Continuously ingests live market data, processes through trained ML models, and outputs directional predictions (up/down/hold). Decision-support tool — not financial advice.</p><div class="dc-badge">Real-time data pipeline</div></div>
+      <div class="dc"><div class="dc-lbl">Coverage</div><h3>Supported assets</h3><ul><li>Major forex pairs — USD, EUR, GBP, JPY and more</li><li>Gold (XAU/USD) — commodity price prediction</li><li>Bitcoin (BTC/USD) — crypto directional forecasting</li><li>Expandable via additional data source integration</li></ul></div>
+      <div class="dc"><div class="dc-lbl">Performance</div><h3>~75% accuracy</h3><p>Approximately 75% directional accuracy under standard market conditions. This is directional correctness (up/down), not price-level precision. Results vary by volatility.</p><div class="dc-badge">~75% directional accuracy</div></div>
+      <div class="dc"><div class="dc-lbl">Architecture</div><h3>How it works</h3><ul><li>Connects to live market data APIs for OHLCV data</li><li>Preprocesses and normalizes via automated pipelines</li><li>Runs trained ML classifiers for trend prediction</li><li>Outputs directional signal with confidence score</li><li>Optional integration with trading platforms</li></ul></div>
+      <div class="dc"><div class="dc-lbl">Technology</div><h3>Built with</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">Scikit-Learn</span><span class="dc-tag">TensorFlow</span><span class="dc-tag">Pandas</span><span class="dc-tag">NumPy</span><span class="dc-tag">LSTM</span><span class="dc-tag">Random Forest</span><span class="dc-tag">Docker</span></div></div>
+      <div class="dc"><div class="dc-lbl">Disclaimer</div><h3>Important</h3><p>TradingX is a decision-support tool. It does not constitute financial advice. All trading involves risk. Past accuracy does not guarantee future results. For informational purposes only.</p><div class="dc-badge">Cloud / API deployment</div></div>
+    </div>
+    <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Inquire about TradingX →</button></div>
+  </div>
+</div>
+
+<!-- ════════ SERVICE PAGES ════════ -->
+<div id="page-service-voice" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Service</span><h1>AI Voice Assistants</h1><p>Custom voice-driven AI that takes verbal commands, automates workflows, and runs operations completely hands-free.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Overview</div><h3>What it does</h3><p>Custom AI voice assistant tuned to your business — listens for commands, understands context, and executes tasks from scheduling to CRM updates and team notifications.</p></div>
+    <div class="dc"><div class="dc-lbl">Use cases</div><h3>Applications</h3><ul><li>Reception desks: voice-controlled appointment booking</li><li>Warehouses: hands-free inventory logging</li><li>Field operations: voice-driven reporting and updates</li><li>Executives: voice-commanded scheduling and tasks</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technical</div><h3>How it works</h3><ul><li>Custom wake-word detection activates the assistant</li><li>Real-time speech-to-text transcription</li><li>NLP layer interprets intent and parameters</li><li>Action layer executes tasks via API integrations</li><li>TTS confirms actions with verbal feedback</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technology</div><h3>Stack</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">Whisper / Vosk</span><span class="dc-tag">LangChain</span><span class="dc-tag">OpenAI / Claude</span><span class="dc-tag">REST APIs</span><span class="dc-tag">pyttsx3</span></div><div class="dc-badge">Local or Cloud deployment</div></div>
+  </div>
+  <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Request this service →</button></div>
+</div></div>
+
+<div id="page-service-company-ai" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Service</span><h1>Company AI</h1><p>A private AI assistant trained entirely on your company's documents, policies, manuals, and knowledge base. Your data never leaves your infrastructure.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Overview</div><h3>What it does</h3><p>We train a private AI model on your company's documents and operational data — an intelligent assistant that knows your business inside-out and answers any question your team might have.</p></div>
+    <div class="dc"><div class="dc-lbl">Use cases</div><h3>Applications</h3><ul><li>Internal helpdesk: policy and procedure questions</li><li>Customer support: product FAQ and troubleshooting</li><li>HR operations: onboarding assistant</li><li>Sales enablement: pricing, product, objection handling AI</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technical</div><h3>How it works</h3><ul><li>Ingest your docs — PDF, Word, Notion, Confluence</li><li>Vector database built from embedded documents</li><li>RAG pipeline deployed with chat interface</li><li>Chat via web, Slack, Teams, or WhatsApp</li><li>Knowledge base updated on schedule or trigger</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technology</div><h3>Stack</h3><div class="dc-tags"><span class="dc-tag">LangChain</span><span class="dc-tag">Pinecone</span><span class="dc-tag">OpenAI Embeddings</span><span class="dc-tag">RAG</span><span class="dc-tag">FastAPI</span><span class="dc-tag">Docker</span></div><div class="dc-badge">Private / On-premise deployment</div></div>
+  </div>
+  <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Request this service →</button></div>
+</div></div>
+
+<div id="page-service-chatbot" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Service</span><h1>Automation Chatbots</h1><p>Smart bots on WhatsApp, your website, or app — capturing leads, booking appointments, and handling queries 24/7 with zero manual effort.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Overview</div><h3>What it does</h3><p>Conversational AI that engages customers, answers questions, qualifies needs, and guides to action — no human operator needed.</p></div>
+    <div class="dc"><div class="dc-lbl">Use cases</div><h3>Applications</h3><ul><li>Salons and clinics: WhatsApp appointment booking</li><li>E-commerce: order status, product queries, returns</li><li>Coaches and freelancers: lead qualification and intake</li><li>Agencies: onboarding questionnaires and project intake</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technical</div><h3>How it works</h3><ul><li>Connected to WhatsApp Business API or website widget</li><li>NLP engine interprets customer messages and intent</li><li>Flow engine routes to appropriate responses or actions</li><li>Integrates with calendars, CRMs, and payment systems</li><li>Optional human handoff escalation</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technology</div><h3>Stack</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">WhatsApp API</span><span class="dc-tag">LangChain</span><span class="dc-tag">OpenAI / Claude</span><span class="dc-tag">FastAPI</span><span class="dc-tag">MySQL</span></div><div class="dc-badge">Cloud deployment</div></div>
+  </div>
+  <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Request this service →</button></div>
+</div></div>
+
+<div id="page-service-database" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Service</span><h1>AI Database Managers</h1><p>Ask your database in plain English — instant SQL, automated reports, and scheduled data insights. No SQL skills required from your team.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Overview</div><h3>What it does</h3><p>Natural language interface over your existing database. Non-technical staff query complex data using normal sentences — AI translates intent into SQL and returns clean formatted results.</p></div>
+    <div class="dc"><div class="dc-lbl">Example queries</div><h3>Use cases</h3><ul><li>"Show items below reorder level this week"</li><li>"Which reps closed the most deals last quarter?"</li><li>"Generate monthly P&amp;L summary automatically"</li><li>"Average delivery time by region, last 30 days"</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technical</div><h3>How it works</h3><ul><li>Connect to MySQL, PostgreSQL, SQLite, or MSSQL</li><li>Schema mapped to LLM context automatically</li><li>Plain English question → validated SQL query</li><li>Results returned as table, chart, or natural language</li><li>Scheduled reports delivered on your cadence</li></ul></div>
+    <div class="dc"><div class="dc-lbl">Technology</div><h3>Stack</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">LangChain SQL</span><span class="dc-tag">SQLAlchemy</span><span class="dc-tag">Pandas</span><span class="dc-tag">Plotly</span><span class="dc-tag">FastAPI</span></div><div class="dc-badge">Local or Cloud deployment</div></div>
+  </div>
+  <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Request this service →</button></div>
+</div></div>
+
+<!-- ════════ ALL SERVICES ════════ -->
+<div id="page-services" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Services</span><h1>AI services we offer</h1><p>Four focused AI service areas built for real business problems. Click any to explore full details.</p></div>
+  <div class="d-grid">
+    <div class="dc" style="cursor:pointer" onclick="go('service-voice')"><div class="dc-lbl">Service</div><h3>AI Voice Assistants</h3><p>Custom voice systems for hands-free business automation.</p><div style="margin-top:1rem;font-size:.81rem;font-weight:500;color:var(--text3)">Learn more →</div></div>
+    <div class="dc" style="cursor:pointer" onclick="go('service-company-ai')"><div class="dc-lbl">Service</div><h3>Company AI</h3><p>Private RAG-powered AI trained on your documents and knowledge base.</p><div style="margin-top:1rem;font-size:.81rem;font-weight:500;color:var(--text3)">Learn more →</div></div>
+    <div class="dc" style="cursor:pointer" onclick="go('service-chatbot')"><div class="dc-lbl">Service</div><h3>Automation Chatbots</h3><p>WhatsApp and web bots for 24/7 lead capture and customer engagement.</p><div style="margin-top:1rem;font-size:.81rem;font-weight:500;color:var(--text3)">Learn more →</div></div>
+    <div class="dc" style="cursor:pointer" onclick="go('service-database')"><div class="dc-lbl">Service</div><h3>AI Database Managers</h3><p>Natural language querying over your existing databases.</p><div style="margin-top:1rem;font-size:.81rem;font-weight:500;color:var(--text3)">Learn more →</div></div>
+  </div>
+</div></div>
+
+<!-- ════════ TECH STACK ════════ -->
+<div id="page-tech" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Technology</span><h1>Tech stack</h1><p>Tools, frameworks, and platforms powering every system we build — chosen for performance, reliability, and flexibility.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">AI Models &amp; LLMs</div><h3>Language models</h3><div class="dc-tags"><span class="dc-tag">GPT-4 (OpenAI)</span><span class="dc-tag">Gemini (Google)</span><span class="dc-tag">Claude (Anthropic)</span><span class="dc-tag">Ollama / Local LLMs</span><span class="dc-tag">Whisper STT</span><span class="dc-tag">Vosk (Offline)</span></div></div>
+    <div class="dc"><div class="dc-lbl">AI Orchestration</div><h3>Pipelines</h3><div class="dc-tags"><span class="dc-tag">LangChain</span><span class="dc-tag">RAG Pipelines</span><span class="dc-tag">Pinecone</span><span class="dc-tag">Chroma DB</span><span class="dc-tag">OpenAI Embeddings</span><span class="dc-tag">LangGraph</span></div></div>
+    <div class="dc"><div class="dc-lbl">Core</div><h3>Languages &amp; frameworks</h3><div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">FastAPI</span><span class="dc-tag">Flask</span><span class="dc-tag">PyAutoGUI</span><span class="dc-tag">SQLAlchemy</span><span class="dc-tag">pyttsx3</span></div></div>
+    <div class="dc"><div class="dc-lbl">Machine Learning</div><h3>ML &amp; data science</h3><div class="dc-tags"><span class="dc-tag">TensorFlow / Keras</span><span class="dc-tag">Scikit-Learn</span><span class="dc-tag">Pandas</span><span class="dc-tag">NumPy</span><span class="dc-tag">LSTM</span><span class="dc-tag">Random Forest</span></div></div>
+    <div class="dc"><div class="dc-lbl">Infrastructure</div><h3>Databases &amp; deployment</h3><div class="dc-tags"><span class="dc-tag">Supabase</span><span class="dc-tag">PostgreSQL</span><span class="dc-tag">MySQL</span><span class="dc-tag">SQLite</span><span class="dc-tag">Docker</span><span class="dc-tag">REST APIs</span></div></div>
+    <div class="dc"><div class="dc-lbl">Security</div><h3>Privacy &amp; security</h3><div class="dc-tags"><span class="dc-tag">AES Encryption</span><span class="dc-tag">HTTPS / TLS</span><span class="dc-tag">Local-First</span><span class="dc-tag">Offline LLM</span><span class="dc-tag">Razorpay</span></div></div>
+  </div>
+</div></div>
+
+<!-- ════════ ABOUT / COMPANY ════════ -->
+<div id="page-about" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Company</span><h1>About KhanaI Technologies</h1><p>An AI engineering company building production-grade AI systems — from desktop assistants to market intelligence and business automation worldwide.</p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Mission</div><h3>What drives us</h3><p>To make enterprise-grade AI accessible to businesses of all sizes — without the enterprise price tag, agency middlemen, or 6-month timelines. We build working AI that ships fast.</p></div>
+    <div class="dc"><div class="dc-lbl">Approach</div><h3>How we work</h3><p>Every system is production-ready by design. No proof-of-concept handed off as finished. Every API, model, and integration is tested under real load before shipping to any client.</p></div>
+    <div class="dc"><div class="dc-lbl">Values</div><h3>Privacy first</h3><p>Every system defaults to local execution and minimal data collection. Your data is yours — never monetized, never resold, disclosed only as operationally required and disclosed.</p></div>
+    <div class="dc"><div class="dc-lbl">Company info</div><h3>Details</h3><p><strong>Company:</strong> KhanaI Technologies<br><br><strong>Studio:</strong> khan.ai.technologies<br><br><strong>Website:</strong> <a href="https://khanaitechnologies.netlify.app/" target="_blank" style="color:var(--text);text-decoration:underline">khanaitechnologies.netlify.app</a><br><br><strong>Location:</strong> Worldwide · Remote-first<br><br><strong>Email:</strong> <a href="mailto:khurramkhan9177@gmail.com" style="color:var(--text);text-decoration:underline">khurramkhan9177@gmail.com</a></p></div>
+  </div>
+  <!-- FOUNDER - About page only -->
+  <div class="fn-card">
+    <div class="fn-av">👨‍💻</div>
+    <div>
+      <div class="fn-lbl">Founder</div>
+      <div class="fn-name">Shamsheer Khan Khurrum</div>
+      <div class="fn-role">Lead Engineer · KhanaI Technologies</div>
+      <p class="fn-bio">Founder and lead engineer at KhanaI Technologies. Builds production AI systems from the ground up — no outsourcing, no fluff. Every product is designed, engineered, and deployed with a commitment to real-world performance and privacy.</p>
+      <p class="fn-bio">Creator of <strong>WinPilot AI</strong> — the multi-model AI Windows assistant — and <strong>TradingX</strong>, an AI trading agent with ~75% directional prediction accuracy across forex, gold, and BTC.</p>
+      <div class="fn-chips">
+        <span class="fn-chip">AI / ML Engineering</span>
+        <span class="fn-chip">NLP &amp; LLMs</span>
+        <span class="fn-chip">Systems Automation</span>
+        <span class="fn-chip">Python</span>
+        <span class="fn-chip">Voice AI</span>
+        <span class="fn-chip">ML Pipelines</span>
+        <span class="fn-chip">Product Builder</span>
+        <span class="fn-chip">Windows Automation</span>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ════════ SETTINGS (WinPilot Display Only) ════════ -->
+<div id="page-settings" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top" style="max-width:600px"><span class="lbl">WinPilot AI</span><h1>Settings preview</h1><p>Display preview of the WinPilot AI configuration panel — showing the capabilities available in the desktop application. Toggles are visual only.</p></div>
+  <div class="st-layout">
+    <div class="st-sidebar">
+      <h4>Settings</h4>
+      <div class="st-nav-item act" onclick="scrollSt('ai')">AI Model</div>
+      <div class="st-nav-item" onclick="scrollSt('voice')">Voice</div>
+      <div class="st-nav-item" onclick="scrollSt('auto')">Automation</div>
+      <div class="st-nav-item" onclick="scrollSt('priv')">Privacy</div>
+      <div class="st-nav-item" onclick="scrollSt('appear')">Appearance</div>
+    </div>
+    <div class="st-panel">
+      <div class="st-group" id="st-ai">
+        <div class="st-group-hdr"><h3>AI Model</h3><p>Choose which model powers WinPilot AI. Switch at any time.</p></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Active model</h5><p>Used for all command processing</p></div><select class="st-sel" id="mdSel" onchange="svSt('model',this.value)"><option value="gpt4">GPT-4 (OpenAI)</option><option value="gemini">Gemini (Google)</option><option value="claude">Claude (Anthropic)</option><option value="local">Local Model (Offline)</option></select></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Fallback model</h5><p>Used if primary is unavailable</p></div><select class="st-sel" id="fbSel" onchange="svSt('fallback',this.value)"><option value="claude">Claude</option><option value="gpt4">GPT-4</option><option value="gemini">Gemini</option><option value="local">Local Model</option></select></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Response length</h5><p>Verbosity of AI responses</p></div><select class="st-sel" id="rlSel" onchange="svSt('responseLen',this.value)"><option value="concise">Concise</option><option value="balanced" selected>Balanced</option><option value="detailed">Detailed</option></select></div>
+      </div>
+      <div class="st-group" id="st-voice">
+        <div class="st-group-hdr"><h3>Voice</h3><p>Configure listening and speech output.</p></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Voice mode</h5><p>Enable hands-free voice command input</p></div><div class="tog" id="t-voiceMode" onclick="togSt(this,'voiceMode')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Wake word detection</h5><p>Always-on wake word listening</p></div><div class="tog" id="t-wakeWord" onclick="togSt(this,'wakeWord')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Text-to-speech</h5><p>WinPilot AI speaks responses aloud</p></div><div class="tog on" id="t-tts" onclick="togSt(this,'tts')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Language</h5><p>Speech recognition language</p></div><select class="st-sel"><option>English (US)</option><option>English (UK)</option><option>Arabic</option><option>Urdu</option><option>Hindi</option></select></div>
+      </div>
+      <div class="st-group" id="st-auto">
+        <div class="st-group-hdr"><h3>Automation</h3><p>Control what WinPilot AI can automate on your system.</p></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>File system access</h5><p>Allow creating, moving, deleting files</p></div><div class="tog on" id="t-fileAccess" onclick="togSt(this,'fileAccess')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Application control</h5><p>Allow opening and closing applications</p></div><div class="tog on" id="t-appControl" onclick="togSt(this,'appControl')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>System settings control</h5><p>Allow changing volume, display, network</p></div><div class="tog" id="t-sysControl" onclick="togSt(this,'sysControl')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Workflow automation</h5><p>Allow multi-step automated task sequences</p></div><div class="tog on" id="t-workflow" onclick="togSt(this,'workflow')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Confirm before executing</h5><p>Ask before destructive or irreversible actions</p></div><div class="tog on" id="t-confirm" onclick="togSt(this,'confirm')"></div></div>
+      </div>
+      <div class="st-group" id="st-priv">
+        <div class="st-group-hdr"><h3>Privacy</h3><p>Local execution and data boundary controls.</p></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Offline mode</h5><p>Use only local models — no internet</p></div><div class="tog" id="t-offline" onclick="togSt(this,'offline')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Local model only</h5><p>Disable all cloud API calls</p></div><div class="tog" id="t-localOnly" onclick="togSt(this,'localOnly')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Command history</h5><p>Store history locally for context and review</p></div><div class="tog on" id="t-history" onclick="togSt(this,'history')"></div></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Telemetry</h5><p>Anonymous usage data — no personal data</p></div><div class="tog" id="t-telemetry" onclick="togSt(this,'telemetry')"></div></div>
+      </div>
+      <div class="st-group" id="st-appear">
+        <div class="st-group-hdr"><h3>Appearance</h3><p>Visual preferences for the WinPilot AI interface.</p></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Theme</h5><p>Light or dark interface</p></div><select class="st-sel" id="thSel2" onchange="setThFromSettings(this.value)"><option value="light" selected>Light</option><option value="dark">Dark</option></select></div>
+        <div class="st-row"><div class="st-row-lbl"><h5>Animations</h5><p>Enable UI motion and transitions</p></div><div class="tog on" id="t-animations" onclick="togSt(this,'animations')"></div></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ════════ CONTACT PAGE ════════ -->
+<div id="page-contact" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Contact</span><h1>Let's build together</h1><p>Ready to deploy AI for your business? Have a question about WinPilot AI or TradingX? Reach out to our team.</p></div>
+  <div class="ct-grid">
+    <div>
+      <span class="lbl">Get in touch</span>
+      <h2 class="ct-info" style="font-size:2rem;font-weight:800;margin-bottom:.85rem">KhanaI Technologies</h2>
+      <p style="color:var(--text2);font-size:.9rem;line-height:1.75;margin-bottom:1.65rem;max-width:320px">AI Engineering Company — available worldwide, remote-first.</p>
+      <div class="ct-methods">
+        <a href="https://wa.me/916303716492" target="_blank" class="ct-method"><div class="ct-ico">📱</div><div class="ct-txt"><h4>WhatsApp</h4><p>+91 6303716492</p></div></a>
+        <a href="mailto:khurramkhan9177@gmail.com" class="ct-method"><div class="ct-ico">✉️</div><div class="ct-txt"><h4>Email</h4><p>khurramkhan9177@gmail.com</p></div></a>
+        <div class="ct-method"><div class="ct-ico">🌍</div><div class="ct-txt"><h4>Location</h4><p>Worldwide · Remote-first</p></div></div>
+      </div>
+    </div>
+    <form class="ct-form" id="cf2">
+      <div class="f-field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
+      <div class="f-field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div>
+      <div class="f-field"><label>Message</label><textarea name="message" required placeholder="Tell us about your project..."></textarea></div>
+      <button type="submit" class="f-submit">Send message <span>→</span></button>
+    </form>
+  </div>
+</div></div>
+
+<!-- ════════ PRIVACY POLICY ════════ -->
+<div id="page-privacy" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">Legal</span><h1>Privacy Policy</h1><p>WinPilot AI — Effective Date: March 2026</p></div>
+  <div class="pv-wrap">
+    <div class="pv-intro">
+      <p><strong>WinPilot AI</strong> is developed and maintained by <strong>Shamsheer Khan Khurrum / KhanaI Technologies</strong>.</p>
+      <p>This Privacy Policy explains how information is collected, used, stored, and protected when you use the WinPilot AI desktop application.</p>
+      <p>By using WinPilot AI you agree to the terms of this Privacy Policy.</p>
+    </div>
+    <div class="pv-toc">
+      <span class="pv-toc-lbl">Contents</span>
+      <div class="pv-toc-grid">
+        <div class="pv-toc-item">1. Information We Collect</div>
+        <div class="pv-toc-item">2. Chat Data</div>
+        <div class="pv-toc-item">3. AI Services</div>
+        <div class="pv-toc-item">4. Voice &amp; Microphone</div>
+        <div class="pv-toc-item">5. Payments (Razorpay)</div>
+        <div class="pv-toc-item">6. Device Permissions</div>
+        <div class="pv-toc-item">7. Data Security</div>
+        <div class="pv-toc-item">8. Data Sharing</div>
+        <div class="pv-toc-item">9. User Rights</div>
+        <div class="pv-toc-item">10. Children's Privacy</div>
+        <div class="pv-toc-item">11. Policy Changes</div>
+        <div class="pv-toc-item">12. Contact Information</div>
+      </div>
+    </div>
+    <div class="pv-sec"><h3>1. Information We Collect</h3><p>WinPilot AI collects only the minimum information required for the application to function.</p><h4>Account Information</h4><p>When you create an account:</p><ul><li>Email address</li><li>Account name</li><li>Subscription plan information</li><li>Login timestamps</li></ul><p>Used only for authentication and subscription management.</p></div>
+    <div class="pv-sec"><h3>2. Chat Data</h3><p>Chat messages and conversation history may be stored to improve user experience.</p><h4>Local Storage</h4><p>Chat history is stored locally on your device in encrypted format.</p><h4>Cloud Storage (Optional)</h4><p>If cloud synchronization is enabled, chat data may be stored securely using <strong>Supabase cloud database infrastructure</strong>. All transmission is encrypted using HTTPS.</p></div>
+    <div class="pv-sec"><h3>3. AI Services</h3><p>WinPilot AI may connect to third-party AI providers to generate responses:</p><ul><li>Google Gemini (Google LLC)</li><li>OpenAI ChatGPT (OpenAI, L.L.C.)</li><li>Anthropic Claude (Anthropic PBC)</li></ul><p>When using these models, your message may be sent to the selected provider for processing. These providers operate under their own privacy policies.</p></div>
+    <div class="pv-sec"><h3>4. Voice Input and Microphone Usage</h3><ul><li>Voice recognition is processed locally using offline models such as Vosk.</li><li>Audio is <strong>not stored permanently</strong> by the application.</li><li>Voice data is <strong>not transmitted to external servers by WinPilot AI itself</strong>.</li></ul></div>
+    <div class="pv-sec"><h3>5. Payment Information (Razorpay)</h3><p>Payments are processed securely using <strong>Razorpay</strong>. WinPilot AI does <strong>not store</strong> card numbers, CVV codes, or bank credentials. Only Razorpay payment reference IDs are stored to confirm successful transactions.</p></div>
+    <div class="pv-sec"><h3>6. Device Permissions</h3><ul><li><strong>Microphone</strong> — voice command functionality</li><li><strong>File System Access</strong> — saving settings, chat history, and user data locally</li><li><strong>Internet Access</strong> — AI model communication, cloud sync, and updates</li></ul></div>
+    <div class="pv-sec"><h3>7. Data Security</h3><ul><li>AES encryption for locally stored chat data</li><li>HTTPS encrypted communication for all transmissions</li><li>Secure Supabase cloud database infrastructure</li><li>No storage of sensitive financial information</li></ul></div>
+    <div class="pv-sec"><h3>8. Data Sharing</h3><p>WinPilot AI does <strong>not sell, rent, or share</strong> your personal data with third parties for advertising. Data is shared only with AI service providers, Razorpay for payment processing, and Supabase for cloud infrastructure — as required for operation.</p></div>
+    <div class="pv-sec"><h3>9. User Rights</h3><p>You have the right to access your stored data, request deletion of your data, and delete your account. Deleting your account may permanently remove all associated cloud data.</p></div>
+    <div class="pv-sec"><h3>10. Children's Privacy</h3><p>WinPilot AI is not intended for children under 13. If we become aware that data has been collected from a child under 13 without parental consent, the account will be removed immediately.</p></div>
+    <div class="pv-sec"><h3>11. Changes to This Policy</h3><p>We may update this Privacy Policy from time to time. Updates will be published on this page with a new effective date. Continued use of the application constitutes acceptance of the updated policy.</p></div>
+    <div class="pv-sec"><h3>12. Contact Information</h3><p><strong>Developer:</strong> Shamsheer Khan Khurrum<br><br><strong>Company:</strong> KhanaI Technologies<br><br><strong>Email:</strong> <a href="mailto:khurramkhan9177@gmail.com" style="color:var(--text);text-decoration:underline">khurramkhan9177@gmail.com</a><br><br><strong>Website:</strong> <a href="https://khanaitechnologies.netlify.app/" target="_blank" style="color:var(--text);text-decoration:underline">khanaitechnologies.netlify.app</a></p></div>
+    <div class="pv-sec pv-sum"><h3>Summary</h3><p>WinPilot AI is designed with privacy in mind. We collect minimal data, use secure infrastructure, and give users full control over their information.</p></div>
+  </div>
+</div></div>
+
+<script>
+// ============================================================
+// ROUTER
+// ============================================================
+const PAGES = {
+  'home':               'page-home',
+  'winpilot':           'page-winpilot',
+  'tradingx':           'page-tradingx',
+  'service-voice':      'page-service-voice',
+  'service-company-ai': 'page-service-company-ai',
+  'service-chatbot':    'page-service-chatbot',
+  'service-database':   'page-service-database',
+  'services':           'page-services',
+  'tech':               'page-tech',
+  'about':              'page-about',
+  'settings':           'page-settings',
+  'contact':            'page-contact',
+  'privacy':            'page-privacy',
+};
+
+const TITLES = {
+  'home': 'KhanaI Technologies',
+  'winpilot': 'WinPilot AI — KhanaI Technologies',
+  'tradingx': 'TradingX — KhanaI Technologies',
+  'service-voice': 'AI Voice Assistants — KhanaI',
+  'service-company-ai': 'Company AI — KhanaI',
+  'service-chatbot': 'Automation Chatbots — KhanaI',
+  'service-database': 'AI Database Managers — KhanaI',
+  'services': 'Services — KhanaI Technologies',
+  'tech': 'Tech Stack — KhanaI Technologies',
+  'about': 'Company — KhanaI Technologies',
+  'settings': 'WinPilot AI Settings',
+  'contact': 'Contact — KhanaI Technologies',
+  'privacy': 'Privacy Policy — KhanaI Technologies',
+};
+
+function go(route) {
+  // Close mobile menu
+  document.getElementById('mobNav').classList.remove('open');
+  document.getElementById('mobBtn').textContent = '☰';
+
+  // Default to home if unknown route
+  if (!PAGES[route]) route = 'home';
+
+  // Hide ALL pages and inner pages
+  document.querySelectorAll('.page, .inner').forEach(el => {
+    el.style.display = 'none';
+    el.classList.remove('active');
+  });
+
+  // Show target
+  const target = document.getElementById(PAGES[route]);
+  if (!target) { console.warn('Page not found:', PAGES[route]); return; }
+
+  if (route === 'home') {
+    target.style.display = 'block';
+  } else {
+    target.style.display = 'block';
+    target.classList.add('active');
+    // Trigger reveal animations
+    setTimeout(() => {
+      target.querySelectorAll('.rv').forEach(el => el.classList.add('show'));
+    }, 80);
+  }
+
+  // Update title
+  document.title = TITLES[route] || 'KhanaI Technologies';
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Init: show home on load
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.page, .inner').forEach(el => el.style.display = 'none');
+  const home = document.getElementById('page-home');
+  if (home) home.style.display = 'block';
+
+  // Restore settings toggles
+  restoreSettings();
+
+  // Restore theme
+  const saved = localStorage.getItem('khanai-theme') || 'light';
+  applyTheme(saved);
+});
+
+// ============================================================
+// THEME — done with data-theme on <html>
+// All colors via CSS variables, so this is all we need
+// ============================================================
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('khanai-theme', t);
+  const ico = document.getElementById('thIco');
+  if (ico) ico.textContent = (t === 'dark') ? '☀️' : '🌙';
+  // Sync settings page select if open
+  const sel = document.getElementById('thSel2');
+  if (sel) sel.value = t;
+}
+
+function setThFromSettings(val) {
+  applyTheme(val);
+}
+
+document.getElementById('thBtn').addEventListener('click', function() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+document.getElementById('mobBtn').addEventListener('click', function() {
+  const mn = document.getElementById('mobNav');
+  mn.classList.toggle('open');
+  this.textContent = mn.classList.contains('open') ? '✕' : '☰';
+});
+
+// ============================================================
+// NAVBAR SHRINK ON SCROLL
+// ============================================================
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 50) {
+    nav.style.height = '50px';
+    nav.style.boxShadow = '0 1px 8px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.height = '58px';
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// ============================================================
+// SCROLL REVEAL — homepage sections
+// ============================================================
+const revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('show');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -25px 0px' });
+
+document.querySelectorAll('#page-home .rv').forEach(el => revealObs.observe(el));
+
+document.addEventListener('visibilitychange', function() {
+  if (!document.hidden) {
+    document.querySelectorAll('#page-home .rv').forEach(el => revealObs.observe(el));
+  }
+});
+
+// ============================================================
+// CONTACT FORMS
+// ============================================================
+function setupForm(id) {
+  const form = document.getElementById(id);
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const n = fd.get('name') || '';
+    const em = fd.get('email') || '';
+    const m = fd.get('message') || '';
+    const subj = encodeURIComponent('Inquiry from ' + n);
+    const body = encodeURIComponent('Name: ' + n + '\r\nEmail: ' + em + '\r\n\r\n' + m);
+    window.location.href = 'mailto:khurramkhan9177@gmail.com?subject=' + subj + '&body=' + body;
+    const btn = form.querySelector('.f-submit');
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.textContent = 'Opening email client...';
+      btn.style.background = '#166534';
+      setTimeout(function() {
+        btn.innerHTML = orig;
+        btn.style.background = '';
+        form.reset();
+      }, 3000);
+    }
+  });
+}
+setupForm('cf1');
+setupForm('cf2');
+
+// ============================================================
+// SETTINGS TOGGLES
+// ============================================================
+function togSt(el, key) {
+  el.classList.toggle('on');
+  localStorage.setItem('wp_' + key, el.classList.contains('on') ? '1' : '0');
+}
+
+function svSt(key, val) {
+  localStorage.setItem('wp_' + key, val);
+}
+
+function scrollSt(id) {
+  const el = document.getElementById('st-' + id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function restoreSettings() {
+  const toggleKeys = [
+    'voiceMode','wakeWord','tts','fileAccess','appControl',
+    'sysControl','workflow','confirm','offline','localOnly',
+    'history','telemetry','animations'
+  ];
+  const toggleIds = {
+    voiceMode: 't-voiceMode', wakeWord: 't-wakeWord', tts: 't-tts',
+    fileAccess: 't-fileAccess', appControl: 't-appControl', sysControl: 't-sysControl',
+    workflow: 't-workflow', confirm: 't-confirm', offline: 't-offline',
+    localOnly: 't-localOnly', history: 't-history', telemetry: 't-telemetry',
+    animations: 't-animations'
+  };
+  toggleKeys.forEach(function(k) {
+    const v = localStorage.getItem('wp_' + k);
+    if (v !== null) {
+      const el = document.getElementById(toggleIds[k]);
+      if (el) {
+        if (v === '1') el.classList.add('on');
+        else el.classList.remove('on');
+      }
+    }
+  });
+  // Restore selects
+  ['model', 'fallback', 'responseLen'].forEach(function(k) {
+    const v = localStorage.getItem('wp_' + k);
+    if (v) {
+      const sel = document.getElementById(k === 'model' ? 'mdSel' : k === 'fallback' ? 'fbSel' : 'rlSel');
+      if (sel) sel.value = v;
+    }
+  });
+}
+</script>
+</body>
+</html>
