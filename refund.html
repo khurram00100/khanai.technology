@@ -1,96 +1,615 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refund Policy - WinPilot AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #007bff; --bg: #0b0f19; --text: #f8f9fa; --card-bg: #161b22; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 40px 20px; }
-        .container { max-width: 800px; margin: auto; background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid #30363d; }
-        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; }
-        h2 { color: var(--primary); margin-top: 30px; font-size: 1.5rem; }
-        p { margin-bottom: 15px; color: #8b949e; }
-        .plans-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #0d1117; border-radius: 8px; overflow: hidden; }
-        .plans-table th, .plans-table td { padding: 15px; text-align: left; border: 1px solid #30363d; }
-        .plans-table th { background: var(--primary); color: white; }
-        .back-link { display: inline-block; margin-top: 30px; color: var(--primary); text-decoration: none; font-weight: 600; }
-        .footer-note { font-size: 0.9rem; color: #58a6ff; margin-top: 40px; border-top: 1px solid #30363d; padding-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Refund & Cancellation Policy — WinPilot AI by KhanaI Technologies.">
+<meta name="author" content="KhanaI Technologies">
+<title>Refund Policy — KhanaI Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+:root {
+  --bg:       #ffffff;
+  --bg2:      #f7f7f7;
+  --bg3:      #f0f0f0;
+  --bgCard:   #ffffff;
+  --border:   #e5e5e5;
+  --border2:  #d0d0d0;
+  --text:     #111111;
+  --text2:    #555555;
+  --text3:    #888888;
+  --text4:    #bbbbbb;
+  --navBg:    rgba(255,255,255,0.93);
+  --inputBg:  #f7f7f7;
+  --shadow:   0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+  --shadowHov:0 4px 12px rgba(0,0,0,0.12), 0 16px 40px rgba(0,0,0,0.08);
+  --accent:   #111111;
+  --accentBg: #111111;
+  --accentFg: #ffffff;
+  --green:    #166534;
+  --greenBg:  #f0fdf4;
+  --greenBd:  #bbf7d0;
+  --red:      #991b1b;
+  --redBg:    #fef2f2;
+  --redBd:    #fecaca;
+  --amber:    #92400e;
+  --amberBg:  #fffbeb;
+  --amberBd:  #fde68a;
+}
+
+[data-theme="dark"] {
+  --bg:       #0a0a0a;
+  --bg2:      #111111;
+  --bg3:      #1a1a1a;
+  --bgCard:   #111111;
+  --border:   #2a2a2a;
+  --border2:  #3a3a3a;
+  --text:     #f0f0f0;
+  --text2:    #a0a0a0;
+  --text3:    #666666;
+  --text4:    #444444;
+  --navBg:    rgba(10,10,10,0.93);
+  --inputBg:  #1a1a1a;
+  --shadow:   0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
+  --shadowHov:0 4px 12px rgba(0,0,0,0.5), 0 16px 40px rgba(0,0,0,0.4);
+  --accent:   #f0f0f0;
+  --accentBg: #f0f0f0;
+  --accentFg: #0a0a0a;
+  --green:    #4ade80;
+  --greenBg:  #052e16;
+  --greenBd:  #14532d;
+  --red:      #f87171;
+  --redBg:    #450a0a;
+  --redBd:    #7f1d1d;
+  --amber:    #fbbf24;
+  --amberBg:  #451a03;
+  --amberBd:  #78350f;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', sans-serif;
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+a { text-decoration: none; color: inherit; }
+button { font-family: 'Inter', sans-serif; cursor: pointer; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  height: 58px;
+  display: flex; align-items: center;
+  background: var(--navBg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.nav-inner {
+  max-width: 1180px; width: 100%; margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.5rem;
+  cursor: pointer; font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--text);
+  text-decoration: none;
+}
+.nav-logo-k {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--text); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 800; flex-shrink: 0;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 1.75rem; list-style: none;
+}
+.nav-links a {
+  font-size: 0.84rem; font-weight: 500;
+  color: var(--text2); transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 0.65rem; }
+.btn-theme {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: none; border: 1px solid var(--border);
+  color: var(--text2); display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; transition: all 0.2s;
+}
+.btn-theme:hover { border-color: var(--border2); color: var(--text); }
+.btn-nav-cta {
+  padding: 0.45rem 1.1rem; border-radius: 7px;
+  background: var(--text); color: var(--bg);
+  font-size: 0.82rem; font-weight: 600; border: none; transition: opacity 0.2s;
+  text-decoration: none;
+}
+.btn-nav-cta:hover { opacity: 0.85; }
+.btn-mob { display: none; background: none; border: none; color: var(--text); font-size: 1.3rem; }
+
+/* mobile nav */
+.mob-nav {
+  display: none; position: fixed; top: 58px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 1.25rem 1.5rem; z-index: 998;
+}
+.mob-nav.open { display: block; }
+.mob-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.mob-nav li a {
+  font-size: 0.95rem; font-weight: 500; color: var(--text2); display: block; padding: 0.3rem 0;
+}
+.mob-nav li a:hover { color: var(--text); }
+
+/* ============================================================
+   INNER PAGE LAYOUT
+   ============================================================ */
+.inner {
+  min-height: 100vh;
+  padding: 6.5rem 1.5rem 5rem;
+  background: var(--bg);
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.48rem 0.95rem; border-radius: 7px;
+  background: none; border: 1px solid var(--border);
+  color: var(--text2); font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all 0.18s; margin-bottom: 2.5rem;
+  font-family: 'Inter', sans-serif; text-decoration: none;
+}
+.btn-back:hover { border-color: var(--border2); color: var(--text); }
+
+/* ============================================================
+   PAGE HEADER
+   ============================================================ */
+.lbl {
+  font-size: 0.7rem; font-weight: 700; color: var(--text3);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;
+  display: block;
+}
+.pg-top { max-width: 680px; margin: 0 auto 3.5rem; }
+.pg-top h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.9rem; }
+.pg-top p { font-size: 1rem; color: var(--text2); line-height: 1.78; }
+
+/* ============================================================
+   REFUND PAGE CARDS
+   ============================================================ */
+.rf-wrap { max-width: 760px; margin: 0 auto; }
+
+.rf-meta {
+  display: flex; align-items: center; gap: 0.55rem;
+  padding: 0.85rem 1.1rem; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--bg2);
+  margin-bottom: 2rem; font-size: 0.81rem; color: var(--text3);
+}
+.rf-meta-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text3); flex-shrink: 0; }
+
+.rf-sec {
+  padding: 1.75rem; border: 1px solid var(--border);
+  border-radius: 12px; background: var(--bgCard);
+  margin-bottom: 1.1rem; transition: border-color 0.18s;
+}
+.rf-sec:hover { border-color: var(--border2); }
+.rf-sec-hdr {
+  display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1.1rem;
+}
+.rf-sec-num {
+  width: 26px; height: 26px; border-radius: 6px;
+  background: var(--bg2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora', sans-serif; font-size: 0.7rem; font-weight: 800;
+  color: var(--text3); flex-shrink: 0;
+}
+.rf-sec h2 {
+  font-size: 0.97rem; font-weight: 700; color: var(--text);
+  letter-spacing: -0.01em; line-height: 1.2;
+}
+.rf-sec p { font-size: 0.86rem; color: var(--text2); line-height: 1.78; margin-bottom: 0.55rem; }
+.rf-sec p:last-child { margin-bottom: 0; }
+
+/* Plans table */
+.rf-table { width: 100%; border-collapse: collapse; margin-top: 0.85rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+.rf-table th {
+  padding: 0.72rem 1rem; text-align: left; background: var(--bg2);
+  font-size: 0.72rem; font-weight: 700; color: var(--text3);
+  letter-spacing: 0.07em; text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.rf-table td {
+  padding: 0.82rem 1rem; font-size: 0.85rem; color: var(--text2);
+  border-bottom: 1px solid var(--border);
+}
+.rf-table tr:last-child td { border-bottom: none; }
+.rf-table tr:hover td { background: var(--bg2); }
+.rf-price { font-family: 'Sora', sans-serif; font-weight: 700; color: var(--text); font-size: 0.92rem; }
+.rf-badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.18rem 0.55rem; border-radius: 4px;
+  font-size: 0.71rem; font-weight: 500;
+}
+.rf-badge.monthly { background: var(--amberBg); border: 1px solid var(--amberBd); color: var(--amber); }
+.rf-badge.lifetime { background: var(--greenBg); border: 1px solid var(--greenBd); color: var(--green); }
+
+/* List items */
+.rf-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.6rem; }
+.rf-list li {
+  font-size: 0.85rem; color: var(--text2); display: flex;
+  align-items: flex-start; gap: 0.55rem; line-height: 1.6;
+}
+.rf-list li::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--text3); flex-shrink: 0; margin-top: 0.58rem;
+}
+.rf-list.check li::before { display: none; }
+.rf-list.check li .rf-ico { font-size: 0.82rem; flex-shrink: 0; margin-top: 0.05rem; }
+
+/* Alert boxes */
+.rf-alert {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  padding: 1rem 1.1rem; border-radius: 8px; margin-top: 0.85rem;
+  font-size: 0.84rem; line-height: 1.65;
+}
+.rf-alert.green { background: var(--greenBg); border: 1px solid var(--greenBd); color: var(--green); }
+.rf-alert.red   { background: var(--redBg);   border: 1px solid var(--redBd);   color: var(--red); }
+.rf-alert.amber { background: var(--amberBg); border: 1px solid var(--amberBd); color: var(--amber); }
+.rf-alert-ico { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+
+/* Contact block */
+.rf-contact {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 0.85rem;
+}
+.rf-ct-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.95rem 1.1rem; border: 1px solid var(--border);
+  border-radius: 10px; background: var(--bg2);
+  text-decoration: none; color: inherit; transition: all 0.18s;
+}
+.rf-ct-item:hover { border-color: var(--border2); box-shadow: var(--shadow); }
+.rf-ct-ico {
+  width: 34px; height: 34px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bgCard);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0;
+}
+.rf-ct-txt h4 { font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 0.1rem; }
+.rf-ct-txt p { font-size: 0.76rem; color: var(--text3); }
+
+/* Footer note */
+.rf-footer-note {
+  padding: 1.4rem; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bg2); margin-top: 1.75rem;
+  font-size: 0.82rem; color: var(--text3); line-height: 1.68; text-align: center;
+}
+.rf-footer-note a { color: var(--text2); text-decoration: underline; }
+.rf-footer-note a:hover { color: var(--text); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { background: var(--bg); border-top: 1px solid var(--border); margin-top: 5rem; }
+.ft-btm { border-top: 1px solid var(--border); padding: 1.2rem 1.5rem; }
+.ft-btm-in {
+  max-width: 1180px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 0.75rem;
+}
+.ft-btm-in p { font-size: 0.77rem; color: var(--text3); }
+.ft-btm-in a { font-size: 0.77rem; color: var(--text3); text-decoration: underline; transition: color 0.15s; }
+.ft-btm-in a:hover { color: var(--text); }
+.ft-top { max-width: 1180px; margin: 0 auto; padding: 3rem 1.5rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem; }
+.ft-logo-row { display: flex; align-items: center; gap: 0.5rem; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.97rem; color: var(--text); }
+.ft-desc { font-size: 0.81rem; color: var(--text3); line-height: 1.65; max-width: 235px; margin-top: 0.5rem; }
+.ft-links { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+.ft-links a { font-size: 0.82rem; color: var(--text3); transition: color 0.15s; }
+.ft-links a:hover { color: var(--text); }
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.rv { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.show { opacity: 1; transform: translateY(0); }
+@keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+.pg-in { animation: rise 0.38s ease both; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .nav-links, .btn-nav-cta { display: none; }
+  .btn-mob { display: block; }
+  .inner { padding: 5.5rem 1.5rem 3.5rem; }
+  .rf-contact { grid-template-columns: 1fr; }
+}
+
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Refund & Cancellation Policy</h1>
-        <p>Last Updated: March 2026</p>
-        
-        <section>
-            <h2>1. Our Pricing Plans</h2>
-            <p>WinPilot AI offers different tiers to suit your needs. Please note the pricing before purchase:</p>
-            <table class="plans-table">
-                <thead>
-                    <tr>
-                        <th>Plan Name</th>
-                        <th>Price (USD)</th>
-                        <th>Access Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Basic Plan</td>
-                        <td>$5</td>
-                        <td>Monthly License</td>
-                    </tr>
-                    <tr>
-                        <td>Pro Plan</td>
-                        <td>$10</td>
-                        <td>Monthly License</td>
-                    </tr>
-                    <tr>
-                        <td>Pro Max Plan</td>
-                        <td>$25</td>
-                        <td>Lifetime License</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
 
-        <section>
-            <h2>2. Refund Eligibility</h2>
-            <p>Since WinPilot AI is a digital software product, we offer a <strong>7-day refund policy</strong> under the following conditions:</p>
-            <ul>
-                <li>The software fails to launch or perform its core functions on your Windows system.</li>
-                <li>You have contacted our support team and the issue was not resolved within 48 hours.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Non-Refundable Situations</h2>
-            <p>Refunds will not be issued if:</p>
-            <ul>
-                <li>The license key has been activated for more than 7 days.</li>
-                <li>You simply "changed your mind" after using the software features.</li>
-                <li>Your hardware does not meet the minimum requirements specified in the documentation.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>4. Shipping & Digital Delivery</h2>
-            <p>WinPilot AI is a digital product. No physical shipping is required. Your license key and download link will be delivered instantly to your registered email address upon successful payment.</p>
-        </section>
-
-        <section>
-            <h2>5. Contact Us</h2>
-            <p>For any refund requests or payment issues, please reach out to us:</p>
-            <p><strong>Email:</strong> khurramkhan9177@gmail.com<br>
-            <strong>Location:</strong> Hyderabad, Telangana, India</p>
-        </section>
-
-        <a href="index.html" class="back-link">← Back to WinPilot AI</a>
-        
-        <div class="footer-note">
-            Note: By purchasing WinPilot AI, you agree to our Terms and Conditions and this Refund Policy.
-        </div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-k">K</div>
+      KhanaI Technologies
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">Company</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-theme" id="thBtn"><span id="thIco">🌙</span></button>
+      <a href="index.html#contact" class="btn-nav-cta">Get in touch</a>
+      <button class="btn-mob" id="mobBtn">☰</button>
     </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Company</a></li>
+    <li><a href="index.html">WinPilot AI</a></li>
+    <li><a href="index.html">TradingX</a></li>
+    <li><a href="index.html">Services</a></li>
+    <li><a href="index.html">Contact</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="inner">
+  <div class="wrap">
+    <div class="rf-wrap pg-in">
+
+      <!-- Back button -->
+      <a href="index.html" class="btn-back">← Back to KhanaI Technologies</a>
+
+      <!-- Page header -->
+      <div class="pg-top">
+        <span class="lbl">Legal · WinPilot AI</span>
+        <h1>Refund &amp; Cancellation Policy</h1>
+        <p>We want you to be confident purchasing WinPilot AI. Read our refund terms carefully before purchase.</p>
+      </div>
+
+      <!-- Last updated -->
+      <div class="rf-meta">
+        <span class="rf-meta-dot"></span>
+        Last updated: March 2026 &nbsp;·&nbsp; Applies to all WinPilot AI plans
+      </div>
+
+      <!-- Section 1: Plans -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">01</div>
+          <h2>Our Pricing Plans</h2>
+        </div>
+        <p>WinPilot AI offers different tiers to suit your needs. Please review pricing before purchase.</p>
+        <table class="rf-table">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Price (USD)</th>
+              <th>Access Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--text)">Basic Plan</strong></td>
+              <td><span class="rf-price">$5</span></td>
+              <td><span class="rf-badge monthly">Monthly License</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text)">Pro Plan</strong></td>
+              <td><span class="rf-price">$10</span></td>
+              <td><span class="rf-badge monthly">Monthly License</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text)">Pro Max Plan</strong></td>
+              <td><span class="rf-price">$25</span></td>
+              <td><span class="rf-badge lifetime">Lifetime License</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 2: Eligibility -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">02</div>
+          <h2>Refund Eligibility</h2>
+        </div>
+        <p>Since WinPilot AI is a digital software product, we offer a <strong>7-day refund policy</strong> under the following conditions:</p>
+        <ul class="rf-list check">
+          <li><span class="rf-ico">✓</span> The software fails to launch or perform its core functions on your Windows system.</li>
+          <li><span class="rf-ico">✓</span> You have contacted our support team and the issue was not resolved within 48 hours.</li>
+        </ul>
+        <div class="rf-alert green">
+          <span class="rf-alert-ico">🛡️</span>
+          <span>Both conditions must be met to qualify for a refund. Please reach out to support before submitting a refund request.</span>
+        </div>
+      </div>
+
+      <!-- Section 3: Non-refundable -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">03</div>
+          <h2>Non-Refundable Situations</h2>
+        </div>
+        <p>Refunds will <strong>not</strong> be issued in the following situations:</p>
+        <ul class="rf-list">
+          <li>The license key has been activated for more than 7 days.</li>
+          <li>You simply "changed your mind" after using the software features.</li>
+          <li>Your hardware does not meet the minimum system requirements specified in the documentation.</li>
+        </ul>
+        <div class="rf-alert red">
+          <span class="rf-alert-ico">⚠️</span>
+          <span>Please verify your system meets the minimum requirements before purchasing. Hardware compatibility issues are not covered under this policy.</span>
+        </div>
+      </div>
+
+      <!-- Section 4: Digital delivery -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">04</div>
+          <h2>Shipping &amp; Digital Delivery</h2>
+        </div>
+        <p>WinPilot AI is a fully digital product. No physical shipping is involved.</p>
+        <p>Your license key and download link will be delivered <strong>instantly</strong> to your registered email address upon successful payment. Please check your spam folder if you do not receive it within a few minutes.</p>
+        <div class="rf-alert amber">
+          <span class="rf-alert-ico">📧</span>
+          <span>Delivery issues (e.g. wrong email address) do not qualify for a refund. Please double-check your email at checkout.</span>
+        </div>
+      </div>
+
+      <!-- Section 5: Contact -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">05</div>
+          <h2>Contact Us</h2>
+        </div>
+        <p>For any refund requests or payment issues, please reach out to our support team. We aim to respond within 24 hours.</p>
+        <div class="rf-contact">
+          <a href="mailto:khurramkhan9177@gmail.com" class="rf-ct-item">
+            <div class="rf-ct-ico">✉️</div>
+            <div class="rf-ct-txt">
+              <h4>Email Support</h4>
+              <p>khurramkhan9177@gmail.com</p>
+            </div>
+          </a>
+          <div class="rf-ct-item">
+            <div class="rf-ct-ico">📍</div>
+            <div class="rf-ct-txt">
+              <h4>Location</h4>
+              <p>Hyderabad, Telangana, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <div class="rf-footer-note rv">
+        By purchasing WinPilot AI, you agree to our <a href="index.html">Terms and Conditions</a> and this Refund Policy. For general inquiries, visit the <a href="index.html">KhanaI Technologies homepage</a>.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo-row">
+        <div class="nav-logo-k">K</div>
+        KhanaI Technologies
+      </div>
+      <div class="ft-desc">AI Engineering Company — WinPilot AI, TradingX, and custom AI systems.</div>
+    </div>
+    <div class="ft-links">
+      <a href="index.html">Home</a>
+      <a href="index.html">Products</a>
+      <a href="index.html">Services</a>
+      <a href="index.html">Contact</a>
+      <a href="refund.html">Refund Policy</a>
+    </div>
+  </div>
+  <div class="ft-btm">
+    <div class="ft-btm-in">
+      <p>© 2026 KhanaI Technologies. All rights reserved.</p>
+      <div style="display:flex;gap:1rem;">
+        <a href="index.html">Privacy Policy</a>
+        <a href="refund.html">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// THEME
+// ============================================================
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('khanai-theme', t);
+  const ico = document.getElementById('thIco');
+  if (ico) ico.textContent = (t === 'dark') ? '☀️' : '🌙';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const saved = localStorage.getItem('khanai-theme') || 'light';
+  applyTheme(saved);
+});
+
+document.getElementById('thBtn').addEventListener('click', function() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+document.getElementById('mobBtn').addEventListener('click', function() {
+  const mn = document.getElementById('mobNav');
+  mn.classList.toggle('open');
+  this.textContent = mn.classList.contains('open') ? '✕' : '☰';
+});
+
+// ============================================================
+// NAVBAR SHRINK ON SCROLL
+// ============================================================
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 50) {
+    nav.style.height = '50px';
+    nav.style.boxShadow = '0 1px 8px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.height = '58px';
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+const revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('show');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -25px 0px' });
+
+document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
+</script>
 </body>
 </html>
