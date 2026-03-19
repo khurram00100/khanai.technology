@@ -423,19 +423,24 @@ footer { background: var(--bg); border-top: 1px solid var(--border); margin-top:
           </thead>
           <tbody>
             <tr>
+              <td><strong style="color:var(--text)">Free Plan</strong></td>
+              <td><span class="rf-price">$0</span></td>
+              <td><span class="rf-badge" style="background:var(--bg3);color:var(--text2)">Free Forever</span></td>
+            </tr>
+            <tr>
               <td><strong style="color:var(--text)">Basic Plan</strong></td>
-              <td><span class="rf-price">$5</span></td>
+              <td><span class="rf-price">$5</span> <small style="color:var(--text3);font-size:0.75rem;">/ month</small></td>
               <td><span class="rf-badge monthly">Monthly License</span></td>
             </tr>
             <tr>
               <td><strong style="color:var(--text)">Pro Plan</strong></td>
-              <td><span class="rf-price">$10</span></td>
+              <td><span class="rf-price">$10</span> <small style="color:var(--text3);font-size:0.75rem;">/ month</small></td>
               <td><span class="rf-badge monthly">Monthly License</span></td>
             </tr>
             <tr>
               <td><strong style="color:var(--text)">Pro Max Plan</strong></td>
-              <td><span class="rf-price">$25</span></td>
-              <td><span class="rf-badge lifetime">Lifetime License</span></td>
+              <td><span class="rf-price">$25</span> <small style="color:var(--text3);font-size:0.75rem;">/ month</small></td>
+              <td><span class="rf-badge monthly">Monthly License</span></td>
             </tr>
           </tbody>
         </table>
@@ -449,12 +454,12 @@ footer { background: var(--bg); border-top: 1px solid var(--border); margin-top:
         </div>
         <p>Since WinPilot AI is a digital software product, we offer a <strong>7-day refund policy</strong> under the following conditions:</p>
         <ul class="rf-list check">
-          <li><span class="rf-ico">✓</span> The software fails to launch or perform its core functions on your Windows system.</li>
+          <li><span class="rf-ico">✓</span> The core functions of WinPilot AI (voice commands, AI chat, system controls) fail to work on your Windows system.</li>
           <li><span class="rf-ico">✓</span> You have contacted our support team and the issue was not resolved within 48 hours.</li>
         </ul>
         <div class="rf-alert green">
           <span class="rf-alert-ico">🛡️</span>
-          <span>Both conditions must be met to qualify for a refund. Please reach out to support before submitting a refund request.</span>
+          <span>Both conditions must be met to qualify for a refund. Individual third-party applications not opening due to system-specific configurations do not qualify — please see Section 04 (App Compatibility) for details. Reach out to support before submitting any refund request.</span>
         </div>
       </div>
 
@@ -466,17 +471,47 @@ footer { background: var(--bg); border-top: 1px solid var(--border); margin-top:
         </div>
         <p>Refunds will <strong>not</strong> be issued in the following situations:</p>
         <ul class="rf-list">
-          <li>The license key has been activated for more than 7 days.</li>
+          <li>The license has been active for more than 7 days.</li>
           <li>You simply "changed your mind" after using the software features.</li>
           <li>Your hardware does not meet the minimum system requirements specified in the documentation.</li>
+          <li>A specific third-party application does not open due to your system configuration, install path, or permissions — as described in Section 04.</li>
+          <li>Minor bugs, UI glitches, or behavioural differences that do not prevent core WinPilot AI functionality from working.</li>
         </ul>
         <div class="rf-alert red">
           <span class="rf-alert-ico">⚠️</span>
-          <span>Please verify your system meets the minimum requirements before purchasing. Hardware compatibility issues are not covered under this policy.</span>
+          <span>Please verify your system meets the minimum requirements before purchasing. WinPilot AI works on 90% of standard Windows setups. Compatibility differences due to non-standard configurations are not covered under this refund policy.</span>
         </div>
       </div>
 
-      <!-- Section 4: Digital delivery -->
+      <!-- Section 4: App Compatibility & Beta Notice -->
+      <div class="rf-sec rv">
+        <div class="rf-sec-hdr">
+          <div class="rf-sec-num">04</div>
+          <h2>App Compatibility &amp; Software Notice</h2>
+        </div>
+        <p>WinPilot AI is designed to work seamlessly on Windows systems. However, please read the following before purchasing:</p>
+
+        <div class="rf-alert amber" style="margin-bottom:1rem;">
+          <span class="rf-alert-ico">🚀</span>
+          <span><strong>Recently Released Software —</strong> WinPilot AI is a newly developed application. While we have rigorously tested it, minor bugs or unexpected behaviour may occasionally occur. Any issues found will be identified and corrected in upcoming updates. The app is fully safe to use.</span>
+        </div>
+
+        <p style="margin-bottom:0.9rem;">WinPilot AI can open, control, and interact with applications installed on your system. Compatibility details:</p>
+
+        <ul class="rf-list check">
+          <li><span class="rf-ico">✓</span> Works on <strong>Windows 10 and Windows 11</strong> (64-bit) in the vast majority of cases.</li>
+          <li><span class="rf-ico">✓</span> Approximately <strong>90% of applications</strong> install and open correctly across all standard Windows setups.</li>
+          <li><span class="rf-ico">✓</span> Supports applications installed via Microsoft Store, direct installers, and portable setups.</li>
+        </ul>
+
+        <div class="rf-alert" style="background:var(--bg2);border-color:var(--border);margin-top:1rem;">
+          <span class="rf-alert-ico">ℹ️</span>
+          <span>A small number of applications may not respond as expected depending on <strong>system configuration</strong>, <strong>Windows permissions</strong>, or how the application was originally installed (e.g. non-standard install paths, portable apps, or apps downloaded from unofficial sources). This is not a defect in WinPilot AI — it reflects differences across individual system setups. These edge cases do not qualify as grounds for a refund unless core WinPilot AI functionality itself is affected.</span>
+        </div>
+      </div>
+
+      <!-- Section 5: Digital delivery -->
+
       <div class="rf-sec rv">
         <div class="rf-sec-hdr">
           <div class="rf-sec-num">04</div>
@@ -490,19 +525,19 @@ footer { background: var(--bg); border-top: 1px solid var(--border); margin-top:
         </div>
       </div>
 
-      <!-- Section 5: Contact -->
+      <!-- Section 6: Contact -->
       <div class="rf-sec rv">
         <div class="rf-sec-hdr">
-          <div class="rf-sec-num">05</div>
+          <div class="rf-sec-num">06</div>
           <h2>Contact Us</h2>
         </div>
         <p>For any refund requests or payment issues, please reach out to our support team. We aim to respond within 24 hours.</p>
         <div class="rf-contact">
-          <a href="mailto:khurramkhan9177@gmail.com" class="rf-ct-item">
+          <a href="/cdn-cgi/l/email-protection#8fe4e7fafdfdeee2e4e7eee1b6beb8b8cfe8e2eee6e3a1ece0e2" class="rf-ct-item">
             <div class="rf-ct-ico">✉️</div>
             <div class="rf-ct-txt">
               <h4>Email Support</h4>
-              <p>khurramkhan9177@gmail.com</p>
+              <p><span class="__cf_email__" data-cfemail="e2898a979090838f898a838cdbd3d5d5a2858f838b8ecc818d8f">[email&#160;protected]</span></p>
             </div>
           </a>
           <div class="rf-ct-item">
@@ -553,7 +588,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); margin-top:
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ============================================================
 // THEME
 // ============================================================
@@ -602,14 +637,12 @@ window.addEventListener('scroll', function() {
 // ============================================================
 const revealObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
-    if (e.isIntersecting) {
-      e.target.classList.add('show');
-      revealObs.unobserve(e.target);
-    }
+    if (e.isIntersecting) e.target.classList.add('show');
   });
-}, { threshold: 0.07, rootMargin: '0px 0px -25px 0px' });
-
-document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(function(el) {
+  revealObs.observe(el);
+});
 </script>
 </body>
 </html>
