@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="khanaitechnologies  AI Engineering Company. WinPilot AI, WinHeart AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.">
-<meta name="keywords" content="khanaitechnologies, WinPilot AI, WinHeart AI, TradingX, AI engineering, AI solutions">
+<meta name="description" content="khanaitechnologies AI Engineering Company. WinPilot AI, WinHeart AI, ClipVault AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.">
+<meta name="keywords" content="khanaitechnologies, WinPilot AI, WinHeart AI, ClipVault AI, TradingX, AI engineering, AI solutions">
 <meta name="author" content="khanaitechnologies">
 <meta property="og:title" content="khanaitechnologies | AI Engineering">
 <meta property="og:type" content="website">
@@ -358,6 +358,16 @@ section { padding: 6rem 1.5rem; }
 .prod-ft { padding: 0.85rem 1.75rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
 .prod-ft-lnk { font-size: 0.82rem; font-weight: 500; color: var(--text3); transition: color 0.15s; }
 .prod-card:hover .prod-ft-lnk { color: var(--text); }
+.promo-chip { display:inline-flex; align-items:center; gap:.4rem; margin-top:.85rem; padding:.42rem .7rem; border-radius:999px; background:var(--greenBg); border:1px solid var(--greenBd); color:var(--green); font-size:.74rem; font-weight:800; letter-spacing:.02em; }
+.launch-chip { background:var(--amberBg); border-color:var(--amberBd); color:var(--amber); }
+.promo-panel { max-width:980px; margin:0 auto 2rem; padding:1.2rem 1.35rem; border:1px solid var(--greenBd); border-radius:12px; background:var(--greenBg); display:flex; align-items:center; justify-content:space-between; gap:1.25rem; flex-wrap:wrap; }
+.promo-panel h3 { color:var(--text); font-size:1.1rem; margin-bottom:.3rem; }
+.promo-panel p { color:var(--text2); font-size:.84rem; line-height:1.6; }
+.promo-panel .btn { flex-shrink:0; text-decoration:none; }
+.product-mark { display:block; width:112px; height:112px; object-fit:cover; border-radius:22px; margin:0 auto 1.1rem; border:1px solid var(--border); box-shadow:var(--shadow); }
+.product-intro { max-width:980px; margin:0 auto 2rem; padding:1.5rem; border:1px solid var(--border); border-radius:12px; background:var(--bg2); text-align:center; }
+.product-intro p { color:var(--text2); line-height:1.75; font-size:.95rem; }
+.product-intro strong { display:block; color:var(--text); margin-top:.8rem; font-size:1rem; }
 
 /* ── Window Mockup (display only) ── */
 .mock {
@@ -703,6 +713,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <div class="nav-drop-panel">
           <span onclick="go('winpilot')">WinPilot AI</span>
           <span onclick="go('winheart')">WinHeart AI</span>
+          <span onclick="go('clipvault')">ClipVault AI</span>
           <span onclick="go('tradingx')">TradingX</span>
         </div>
       </li>
@@ -733,6 +744,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <li><span onclick="go('about')">Company</span></li>
     <li><span onclick="go('winpilot')">WinPilot AI</span></li>
     <li><span onclick="go('winheart')">WinHeart AI</span></li>
+    <li><span onclick="go('clipvault')">ClipVault AI</span></li>
     <li><span onclick="go('tradingx')">TradingX</span></li>
     <li><span onclick="go('service-voice')">Voice AI</span></li>
     <li><span onclick="go('service-company-ai')">Company AI</span></li>
@@ -755,7 +767,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
   <div class="hero-in">
     <div class="hero-tag"><span class="hero-tag-dot"></span> AI Engineering Company</div>
     <h1>Build with AI.<br>Ship what works.</h1>
-    <p class="hero-sub">khanaitechnologies engineers production-grade AI systems  WinPilot AI, WinHeart AI, TradingX, voice automation, company AI, chatbots, and database intelligence.</p>
+    <p class="hero-sub">khanaitechnologies engineers production-grade AI systems  WinPilot AI, WinHeart AI, ClipVault AI, TradingX, voice automation, company AI, chatbots, and database intelligence.</p>
     <div class="hero-btns">
       <button class="btn btn-solid" onclick="go('services')">Explore our work</button>
       <a href="https://apps.microsoft.com/store/detail/9NKN32V0WPDZ?cid=DevShareMCLPCS" target="_blank" class="btn btn-ghost" style="text-decoration:none">⊞ WinPilot on Microsoft Store</a>
@@ -763,13 +775,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <div class="hero-pills">
       <span class="h-pill" onclick="go('winpilot')">WinPilot AI</span>
       <span class="h-pill" onclick="go('winheart')">WinHeart AI</span>
+      <span class="h-pill" onclick="go('clipvault')">ClipVault AI</span>
       <span class="h-pill" onclick="go('tradingx')">TradingX</span>
       <span class="h-pill" onclick="go('service-voice')">Voice AI</span>
       <span class="h-pill" onclick="go('service-chatbot')">Chatbots</span>
       <span class="h-pill" onclick="go('service-database')">Database AI</span>
     </div>
     <div class="hero-nums">
-      <div><div class="hn-v">2</div><div class="hn-l">Flagship products</div></div>
+      <div><div class="hn-v">4</div><div class="hn-l">Product lines</div></div>
       <div><div class="hn-v">~75%</div><div class="hn-l">TradingX accuracy</div></div>
       <div><div class="hn-v">4+</div><div class="hn-l">AI service areas</div></div>
       <div><div class="hn-v">100%</div><div class="hn-l">Production-ready</div></div>
@@ -787,9 +800,9 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <span class="lbl">About khanaitechnologies</span>
         <h2>AI that ships.<br>Not demos.</h2>
         <p>khanaitechnologies is an AI engineering company that designs, builds, and deploys production-grade intelligent systems for businesses worldwide.</p>
-        <p>We build three product lines  WinPilot AI, WinHeart AI, and TradingX  alongside custom AI services across voice automation, company AI, chatbots, and database intelligence.</p>
+        <p>We build four product lines  WinPilot AI, WinHeart AI, ClipVault AI, and TradingX  alongside custom AI services across voice automation, company AI, chatbots, and database intelligence.</p>
         <div class="about-stats">
-          <div class="stat-box"><div class="stat-n">3</div><div class="stat-l">Flagship products</div></div>
+          <div class="stat-box"><div class="stat-n">4</div><div class="stat-l">Product lines</div></div>
           <div class="stat-box"><div class="stat-n">~75%</div><div class="stat-l">TradingX accuracy</div></div>
           <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">AI service areas</div></div>
           <div class="stat-box"><div class="stat-n">100%</div><div class="stat-l">Client focused</div></div>
@@ -814,7 +827,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
   <div class="wrap">
     <span class="lbl rv">Our products</span>
     <h2 class="sec-h2 rv">Flagship AI systems</h2>
-    <p class="sec-p rv">Three production-focused products designed for real-world deployment, with WinHeart AI now in early launch.</p>
+    <p class="sec-p rv">Four focused products for Windows productivity, PC health, private clip management, and market intelligence.</p>
     <div class="prod-grid">
       <div class="prod-card rv" onclick="go('winpilot')">
         <div class="prod-hdr"><div class="prod-tag">Desktop AI · Flagship</div><div class="prod-name">WinPilot AI</div><div class="prod-desc">A unified Windows AI workspace for voice, text, documents, images, and productivity workflows.</div></div>
@@ -824,11 +837,18 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <div class="prod-ft"><span class="prod-ft-lnk">View full details →</span></div>
       </div>
       <div class="prod-card rv" onclick="go('winheart')">
-        <div class="prod-hdr"><div class="prod-tag">Windows assistant · Early launch</div><div class="prod-name">WinHeart AI</div><div class="prod-desc">A local-first PC health assistant that diagnoses, repairs, and protects your Windows system.</div></div>
+        <div class="prod-hdr"><div class="prod-tag">Windows assistant · Early launch</div><div class="prod-name">WinHeart AI</div><div class="prod-desc">A local-first PC health assistant that diagnoses, repairs, and protects your Windows system.</div><div class="promo-chip">Free for a limited time</div></div>
         <img class="prod-shot" src="winheart-dashboard.png" alt="WinHeart AI dashboard screenshot">
         <ul class="prod-feats"><li>AI diagnosis and system health checks</li><li>PC repair, network, startup, and storage diagnostics</li><li>Local controls, repair history, and privacy settings</li></ul>
         <div class="prod-pills-row"><span class="prod-pill-tag">Early launch</span><span class="prod-pill-tag">Local-first</span><span class="prod-pill-tag">Windows</span></div>
         <div class="prod-ft"><span class="prod-ft-lnk">Explore WinHeart AI →</span></div>
+      </div>
+      <div class="prod-card rv" onclick="go('clipvault')">
+        <div class="prod-hdr"><div class="prod-tag">Private workspace · Launching soon</div><div class="prod-name">ClipVault AI</div><div class="prod-desc">A local workspace for capturing, searching, organising, and protecting screenshots, text, links, and files.</div><div class="promo-chip launch-chip">Launching Soon</div></div>
+        <img class="prod-shot" src="clipvault-home.png" alt="ClipVault AI private workspace with recent clips and quick capture tools">
+        <ul class="prod-feats"><li>Quick capture for screenshots, text, links, and files</li><li>Local AI summaries, matching, insights, and screenshot text recognition</li><li>Private storage, smart cleanup, backups, tags, pinning, and search</li></ul>
+        <div class="prod-pills-row"><span class="prod-pill-tag">Launching soon</span><span class="prod-pill-tag">Local-first</span><span class="prod-pill-tag">Windows</span></div>
+        <div class="prod-ft"><span class="prod-ft-lnk">Explore ClipVault AI →</span></div>
       </div>
       <div class="prod-card rv" onclick="go('tradingx')">
         <div class="prod-hdr"><div class="prod-tag">AI Trading Agent</div><div class="prod-name">TradingX</div><div class="prod-desc">Real-time market intelligence for currencies, gold, and BTC with directional prediction models.</div></div>
@@ -931,7 +951,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <span class="lbl rv">Why khanaitechnologies</span>
     <h2 class="sec-h2 rv">The right choice for serious AI work</h2>
     <div class="why-grid">
-      <div class="why-card rv"><div class="why-num">01</div><h3>Ships working products</h3><p>WinPilot AI and TradingX are live, deployed products; WinHeart AI is entering early launch.</p></div>
+      <div class="why-card rv"><div class="why-num">01</div><h3>Ships working products</h3><p>WinPilot AI and TradingX are live products, WinHeart AI is in early launch, and ClipVault AI is launching soon.</p></div>
       <div class="why-card rv"><div class="why-num">02</div><h3>Privacy by design</h3><p>Local-first execution. Your data stays on your hardware unless you explicitly choose otherwise.</p></div>
       <div class="why-card rv"><div class="why-num">03</div><h3>No outsourcing</h3><p>You work directly with our engineering team  no agencies, no middlemen, no delays.</p></div>
       <div class="why-card rv"><div class="why-num">04</div><h3>Model flexibility</h3><p>Not locked to one AI provider  GPT-4, Gemini, Claude, or local models per use case.</p></div>
@@ -950,7 +970,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
       <div class="rv">
         <span class="lbl">Contact</span>
         <h2 class="ct-info">Let's build<br>something.</h2>
-        <p>Have a project? Want to learn more about WinPilot AI, WinHeart AI, or TradingX? Reach out.</p>
+        <p>Have a project? Want to learn more about WinPilot AI, WinHeart AI, ClipVault AI, or TradingX? Reach out.</p>
         <div class="ct-methods">
           <a href="https://wa.me/916303716492" target="_blank" class="ct-method">
             <div class="ct-ico">📱</div><div class="ct-txt"><h4>WhatsApp</h4><p>+91 6303716492</p></div>
@@ -983,7 +1003,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <img src="data:image/png;base64,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" alt="WinPilot" style="width:30px;height:30px;border-radius:7px;object-fit:cover">
         khanaitechnologies
       </div>
-      <p class="ft-desc">AI engineering company  WinPilot AI, WinHeart AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.</p>
+      <p class="ft-desc">AI engineering company  WinPilot AI, WinHeart AI, ClipVault AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.</p>
       <div class="ft-soc">
         <a href="#" class="ft-sl">in</a>
         <a href="#" class="ft-sl">gh</a>
@@ -1004,6 +1024,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
       <ul>
         <li><span onclick="go('winpilot')">WinPilot AI</span></li>
         <li><span onclick="go('winheart')">WinHeart AI</span></li>
+        <li><span onclick="go('clipvault')">ClipVault AI</span></li>
         <li><span onclick="go('tradingx')">TradingX</span></li>
         <li><span onclick="go('service-voice')">Voice AI</span></li>
         <li><span onclick="go('service-chatbot')">Chatbots</span></li>
@@ -1048,18 +1069,36 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 
 <div id="page-winheart" class="inner"><div class="wrap">
   <button class="btn-back" onclick="go('home')">← Back</button>
-  <div class="pg-top"><span class="lbl">Windows assistant · Early launch</span><h1>WinHeart AI</h1><p>Diagnose. Fix. Protect. WinHeart AI is a local-first Windows assistant for practical PC health checks, repair guidance, and system privacy controls.</p></div>
+  <div class="pg-top"><span class="lbl">Windows assistant · Early launch</span><h1>WinHeart AI</h1><p>Diagnose. Fix. Protect. WinHeart AI is a local-first Windows assistant for practical PC health checks, repair guidance, and system privacy controls.</p><div class="promo-chip">Free for a limited time</div></div>
+  <div class="promo-panel"><div><h3>Download WinHeart AI free</h3><p>Get WinHeart AI 1.0.0 for Windows at no cost during the limited-time early launch.</p></div><a class="btn btn-solid" href="WinHeartAI-Setup-1.0.0.exe" download>Download for Windows ↓</a></div>
   <div class="media-hero"><img src="winheart-dashboard.png" alt="WinHeart AI dashboard with system overview"></div>
   <div class="d-grid">
     <div class="dc"><div class="dc-lbl">Diagnosis</div><h3>Understand your PC</h3><p>AI Diagnose and System Health bring CPU, RAM, disk, temperature, startup, and network checks into one focused workspace.</p></div>
     <div class="dc"><div class="dc-lbl">Repair</div><h3>Work through supported fixes</h3><p>PC Repair organises network, Bluetooth, audio, performance, storage, startup, Windows services, and update diagnostics.</p></div>
     <div class="dc"><div class="dc-lbl">Control</div><h3>Keep local data in your hands</h3><p>Privacy settings cover online assistance, weather access, account visibility, purchase links, and local data export or deletion controls.</p></div>
-    <div class="dc"><div class="dc-lbl">Availability</div><h3>Early launch</h3><p>WinHeart AI is being introduced as an early launch. Follow the product page or contact khanaitechnologies for release updates.</p><div class="dc-badge">Early launch · Windows</div></div>
+    <div class="dc"><div class="dc-lbl">Availability</div><h3>Early launch</h3><p>WinHeart AI is available to download free for a limited time during its early launch.</p><div class="dc-badge">Free for a limited time · Windows</div></div>
   </div>
   <div class="media-block"><span class="lbl">Product screenshots</span><div class="media-grid media-grid-three"><img src="winheart-dashboard.png" alt="WinHeart AI dashboard"><img src="winheart-repair.png" alt="WinHeart AI PC Repair screen"><img src="winheart-settings.png" alt="WinHeart AI privacy settings screen"></div></div>
   <div class="legal-links" aria-label="WinHeart AI legal information"><span class="lbl">Before purchase</span><a href="winheart-privacy.html">Privacy Policy</a><a href="winheart-terms.html">Terms &amp; Conditions</a><a href="winheart-refund.html">Refund Policy</a></div>
   <div class="media-block"><span class="lbl">WinHeart AI plans</span><div class="d-grid"><div class="dc"><h3>Free</h3><p>$0 USD</p></div><div class="dc"><h3>Basic</h3><p>$5 USD</p></div><div class="dc"><h3>Pro</h3><p>$9 USD</p></div><div class="dc"><h3>Pro Max</h3><p>$16 USD</p></div></div></div>
-  <div style="text-align:center"><button class="btn btn-solid" onclick="go('contact')">Ask about WinHeart AI →</button></div>
+  <div style="text-align:center"><a class="btn btn-solid" href="WinHeartAI-Setup-1.0.0.exe" download>Download WinHeart AI free ↓</a></div>
+</div></div>
+
+<div id="page-clipvault" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><img class="product-mark" src="clipvault-logo.png" alt="ClipVault AI logo"><span class="lbl">Private workspace · Launching soon</span><h1>ClipVault AI</h1><p>Capture, search, organise, and protect your screenshots, text, links, and files in one local Windows workspace.</p><div class="promo-chip launch-chip">Launching Soon</div></div>
+  <div class="media-hero"><img src="clipvault-home.png" alt="ClipVault AI home workspace with quick capture, recent clips, details, and quick tools"></div>
+  <div class="product-intro"><p>Every day, we copy, capture, and save information. Finding it again should not be difficult. ClipVault AI is an intelligent workspace for your clipboard history, screenshots, text, links, and files. Capture effortlessly. Organize intelligently. Search with AI. Detect duplicates, extract text, summarize content, and access what matters in seconds.<strong>ClipVault AI. Capture More. Search Smarter. Stay Organized.</strong></p></div>
+  <div class="d-grid">
+    <div class="dc"><div class="dc-lbl">Quick capture</div><h3>Save what matters fast</h3><p>Capture screenshots, text, and links with keyboard shortcuts, add files, or send content into Smart Organize.</p></div>
+    <div class="dc"><div class="dc-lbl">Clipboard</div><h3>Your clips in one searchable library</h3><p>Keep automatic history for text, links, images, and files with search, copy, paste, pinning, saved clips, multiple selection, and a quick queue.</p></div>
+    <div class="dc"><div class="dc-lbl">Local AI tools</div><h3>Understand and find clips faster</h3><p>Use local summaries, similar clip matching, relevant passages, topic suggestions, library insights, and screenshot text recognition.</p></div>
+    <div class="dc"><div class="dc-lbl">Screenshots</div><h3>Organise old and new captures</h3><p>Import older screenshots, scan folders, browse previews, filter by date, app, or tags, and use local text recognition with auto and batch tags.</p></div>
+    <div class="dc"><div class="dc-lbl">Smart cleanup</div><h3>Review clutter before removing it</h3><p>Find exact duplicates, similar images, blank captures, and older unused images with path previews, disk-space estimates, file selection, and confirmation controls.</p></div>
+    <div class="dc"><div class="dc-lbl">Privacy and backup</div><h3>Local controls for your workspace</h3><p>Use local encrypted content, an app PIN, sensitive-content protection, expiry and clipboard clearing, ignored-app controls, scheduled backups, restore, export, import, retention, and separate workspaces.</p></div>
+  </div>
+  <div class="media-block"><span class="lbl">Real product screenshots</span><div class="media-grid media-grid-three"><img src="clipvault-home.png" alt="ClipVault AI home and recent clips"><img src="clipvault-library.png" alt="ClipVault AI links library and clip details"><img src="clipvault-features.png" alt="ClipVault AI features including local AI, clipboard, screenshots, cleanup, privacy, and backup"></div></div>
+  <div style="text-align:center"><span class="promo-chip launch-chip">ClipVault AI is launching soon</span></div>
 </div></div>
 
 <div id="page-tradingx" class="inner">
@@ -1316,6 +1355,7 @@ const PAGES = {
   'home':               'page-home',
   'winpilot':           'page-winpilot',
   'winheart':           'page-winheart',
+  'clipvault':          'page-clipvault',
   'tradingx':           'page-tradingx',
   'service-voice':      'page-service-voice',
   'service-company-ai': 'page-service-company-ai',
@@ -1333,6 +1373,7 @@ const TITLES = {
   'home': 'khanaitechnologies',
   'winpilot': 'WinPilot AI  khanaitechnologies',
   'winheart': 'WinHeart AI  Early launch',
+  'clipvault': 'ClipVault AI  Launching soon',
   'tradingx': 'TradingX  khanaitechnologies',
   'service-voice': 'AI Voice Assistants  khanaitechnologies',
   'service-company-ai': 'Company AI  khanaitechnologies',
