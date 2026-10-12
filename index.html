@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="khanaitechnologies AI Engineering Company. WinPilot AI, WinHeart AI, ClipVault AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.">
-<meta name="keywords" content="khanaitechnologies, WinPilot AI, WinHeart AI, ClipVault AI, TradingX, AI engineering, AI solutions">
+<meta name="description" content="khanaitechnologies AI Engineering Company. WinPilot AI, WinHeart AI, ClipVault AI, WinQor, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.">
+<meta name="keywords" content="khanaitechnologies, WinPilot AI, WinHeart AI, ClipVault AI, WinQor, TradingX, AI engineering, AI solutions">
 <meta name="author" content="khanaitechnologies">
 <meta property="og:title" content="khanaitechnologies | AI Engineering">
 <meta property="og:type" content="website">
@@ -302,14 +302,14 @@ section { padding: 6rem 1.5rem; }
 .about-text p { color: var(--text2); line-height: 1.8; margin-bottom: 0.85rem; font-size: 0.96rem; }
 .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 2rem; }
 .stat-box {
-  padding: 1.25rem; border: 1px solid var(--border); border-radius: 10px;
+  padding: 1.25rem; border: 1px solid var(--border); border-radius: 16px;
   background: var(--bgCard); transition: border-color 0.18s;
 }
 .stat-box:hover { border-color: var(--border2); }
 .stat-n { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 900; color: var(--text); letter-spacing: -0.04em; }
 .stat-l { font-size: 0.73rem; color: var(--text3); margin-top: 0.2rem; font-weight: 500; }
 .about-visual {
-  aspect-ratio: 1; border: 1px solid var(--border); border-radius: 14px;
+  aspect-ratio: 1; border: 1px solid var(--border); border-radius: 20px;
   background: var(--bgCard); display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
@@ -335,7 +335,7 @@ section { padding: 6rem 1.5rem; }
 .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .prod-card {
   background: var(--bgCard); border: 1px solid var(--border);
-  border-radius: 14px; overflow: hidden; cursor: pointer;
+  border-radius: 22px; overflow: hidden; cursor: pointer;
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
 }
 .prod-card:hover {
@@ -360,14 +360,18 @@ section { padding: 6rem 1.5rem; }
 .prod-card:hover .prod-ft-lnk { color: var(--text); }
 .promo-chip { display:inline-flex; align-items:center; gap:.4rem; margin-top:.85rem; padding:.42rem .7rem; border-radius:999px; background:var(--greenBg); border:1px solid var(--greenBd); color:var(--green); font-size:.74rem; font-weight:800; letter-spacing:.02em; }
 .launch-chip { background:var(--amberBg); border-color:var(--amberBd); color:var(--amber); }
-.promo-panel { max-width:980px; margin:0 auto 2rem; padding:1.2rem 1.35rem; border:1px solid var(--greenBd); border-radius:12px; background:var(--greenBg); display:flex; align-items:center; justify-content:space-between; gap:1.25rem; flex-wrap:wrap; }
+.promo-panel { max-width:980px; margin:0 auto 2rem; padding:1.35rem 1.5rem; border:1px solid var(--greenBd); border-radius:20px; background:var(--greenBg); box-shadow:0 12px 36px rgba(34,197,94,.10); display:flex; align-items:center; justify-content:space-between; gap:1.25rem; flex-wrap:wrap; }
 .promo-panel h3 { color:var(--text); font-size:1.1rem; margin-bottom:.3rem; }
 .promo-panel p { color:var(--text2); font-size:.84rem; line-height:1.6; }
 .promo-panel .btn { flex-shrink:0; text-decoration:none; }
 .product-mark { display:block; width:112px; height:112px; object-fit:cover; border-radius:22px; margin:0 auto 1.1rem; border:1px solid var(--border); box-shadow:var(--shadow); }
-.product-intro { max-width:980px; margin:0 auto 2rem; padding:1.5rem; border:1px solid var(--border); border-radius:12px; background:var(--bg2); text-align:center; }
+.product-intro { max-width:980px; margin:0 auto 2rem; padding:1.5rem; border:1px solid var(--border); border-radius:20px; background:var(--bg2); text-align:center; }
 .product-intro p { color:var(--text2); line-height:1.75; font-size:.95rem; }
 .product-intro strong { display:block; color:var(--text); margin-top:.8rem; font-size:1rem; }
+.model-showcase { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; padding:1.25rem 1.75rem; border-top:1px solid var(--border); }
+.model-chip-card { padding:1rem; border:1px solid var(--border); border-radius:16px; background:var(--bg2); text-align:center; }
+.model-size { display:block; color:var(--text); font-family:'Sora',sans-serif; font-size:1.45rem; font-weight:900; letter-spacing:-.04em; }
+.model-state { display:block; margin-top:.25rem; color:var(--text3); font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 
 /* ── Window Mockup (display only) ── */
 .mock {
@@ -431,7 +435,7 @@ section { padding: 6rem 1.5rem; }
 .services-sec { background: var(--bg2); }
 .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1.1rem; margin-top: 2.5rem; }
 .svc-card {
-  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 18px;
   background: var(--bgCard); cursor: pointer; transition: all 0.18s;
 }
 .svc-card:hover { border-color: var(--border2); background: var(--bg); box-shadow: var(--shadow); }
@@ -458,7 +462,7 @@ section { padding: 6rem 1.5rem; }
 .infra-wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
 .infra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .infra-card {
-  padding: 1.4rem; border: 1px solid var(--border); border-radius: 10px;
+  padding: 1.4rem; border: 1px solid var(--border); border-radius: 16px;
   background: var(--bgCard); transition: border-color 0.18s;
 }
 .infra-card:hover { border-color: var(--border2); }
@@ -484,7 +488,7 @@ section { padding: 6rem 1.5rem; }
 .why-sec { background: var(--bg); }
 .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 1.1rem; margin-top: 2.5rem; }
 .why-card {
-  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 18px;
   background: var(--bgCard); transition: border-color 0.18s;
 }
 .why-card:hover { border-color: var(--border2); }
@@ -503,7 +507,7 @@ section { padding: 6rem 1.5rem; }
 .ct-method {
   display: flex; align-items: center; gap: 0.85rem;
   padding: 0.95rem 1.1rem; border: 1px solid var(--border);
-  border-radius: 10px; background: var(--bgCard);
+  border-radius: 16px; background: var(--bgCard);
   text-decoration: none; color: inherit; transition: all 0.18s;
 }
 .ct-method:hover { border-color: var(--border2); box-shadow: var(--shadow); }
@@ -559,7 +563,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 .pg-top p { font-size: 1rem; color: var(--text2); line-height: 1.78; }
 .d-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; margin-bottom: 3rem; }
 .dc {
-  padding: 1.6rem; border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.6rem; border: 1px solid var(--border); border-radius: 18px;
   background: var(--bgCard); transition: border-color 0.18s;
 }
 .dc:hover { border-color: var(--border2); }
@@ -681,16 +685,17 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 
 /* Product media */
 .prod-shot { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--bg2); }
-.media-hero { max-width:980px; margin:0 auto 2rem; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bgCard); }
+.media-hero { max-width:980px; margin:0 auto 2rem; border:1px solid var(--border); border-radius:22px; overflow:hidden; background:var(--bgCard); }
 .media-hero img { display:block; width:100%; height:auto; }
 .media-block { margin:3rem auto; max-width:980px; }
-.product-video { width:100%; display:block; border:1px solid var(--border); border-radius:12px; background:#000; }
+.product-video { width:100%; display:block; border:1px solid var(--border); border-radius:18px; background:#000; }
 .media-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
 .media-grid-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
-.media-grid img { display:block; width:100%; height:auto; border:1px solid var(--border); border-radius:10px; background:var(--bgCard); }
+.media-grid img { display:block; width:100%; height:auto; border:1px solid var(--border); border-radius:16px; background:var(--bgCard); }
 @media (max-width:768px) { .media-grid,.media-grid-three { grid-template-columns:1fr; } }
+@media (max-width:768px) { .model-showcase { grid-template-columns:1fr; } }
 
-.legal-links { max-width:980px; margin:2rem auto; padding:1rem 1.25rem; border:1px solid var(--border); border-radius:10px; background:var(--bg2); display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap; }
+.legal-links { max-width:980px; margin:2rem auto; padding:1rem 1.25rem; border:1px solid var(--border); border-radius:16px; background:var(--bg2); display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap; }
 .legal-links .lbl { margin:0; }
 .legal-links a { color:var(--text2); text-decoration:underline; font-size:.84rem; }
 .legal-links a:hover { color:var(--text); }
@@ -714,6 +719,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
           <span onclick="go('winpilot')">WinPilot AI</span>
           <span onclick="go('winheart')">WinHeart AI</span>
           <span onclick="go('clipvault')">ClipVault AI</span>
+          <span onclick="go('winqor')">WinQor</span>
           <span onclick="go('tradingx')">TradingX</span>
         </div>
       </li>
@@ -745,6 +751,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <li><span onclick="go('winpilot')">WinPilot AI</span></li>
     <li><span onclick="go('winheart')">WinHeart AI</span></li>
     <li><span onclick="go('clipvault')">ClipVault AI</span></li>
+    <li><span onclick="go('winqor')">WinQor</span></li>
     <li><span onclick="go('tradingx')">TradingX</span></li>
     <li><span onclick="go('service-voice')">Voice AI</span></li>
     <li><span onclick="go('service-company-ai')">Company AI</span></li>
@@ -767,7 +774,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
   <div class="hero-in">
     <div class="hero-tag"><span class="hero-tag-dot"></span> AI Engineering Company</div>
     <h1>Build with AI.<br>Ship what works.</h1>
-    <p class="hero-sub">khanaitechnologies engineers production-grade AI systems  WinPilot AI, WinHeart AI, ClipVault AI, TradingX, voice automation, company AI, chatbots, and database intelligence.</p>
+    <p class="hero-sub">khanaitechnologies engineers production-grade AI systems including WinPilot AI, WinHeart AI, ClipVault AI, the upcoming WinQor model family, TradingX, voice automation, company AI, chatbots, and database intelligence.</p>
     <div class="hero-btns">
       <button class="btn btn-solid" onclick="go('services')">Explore our work</button>
       <a href="https://apps.microsoft.com/store/detail/9NKN32V0WPDZ?cid=DevShareMCLPCS" target="_blank" class="btn btn-ghost" style="text-decoration:none">⊞ WinPilot on Microsoft Store</a>
@@ -776,13 +783,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
       <span class="h-pill" onclick="go('winpilot')">WinPilot AI</span>
       <span class="h-pill" onclick="go('winheart')">WinHeart AI</span>
       <span class="h-pill" onclick="go('clipvault')">ClipVault AI</span>
+      <span class="h-pill" onclick="go('winqor')">WinQor</span>
       <span class="h-pill" onclick="go('tradingx')">TradingX</span>
       <span class="h-pill" onclick="go('service-voice')">Voice AI</span>
       <span class="h-pill" onclick="go('service-chatbot')">Chatbots</span>
       <span class="h-pill" onclick="go('service-database')">Database AI</span>
     </div>
     <div class="hero-nums">
-      <div><div class="hn-v">4</div><div class="hn-l">Product lines</div></div>
+      <div><div class="hn-v">5</div><div class="hn-l">Product lines</div></div>
       <div><div class="hn-v">~75%</div><div class="hn-l">TradingX accuracy</div></div>
       <div><div class="hn-v">4+</div><div class="hn-l">AI service areas</div></div>
       <div><div class="hn-v">100%</div><div class="hn-l">Production-ready</div></div>
@@ -800,9 +808,9 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <span class="lbl">About khanaitechnologies</span>
         <h2>AI that ships.<br>Not demos.</h2>
         <p>khanaitechnologies is an AI engineering company that designs, builds, and deploys production-grade intelligent systems for businesses worldwide.</p>
-        <p>We build four product lines  WinPilot AI, WinHeart AI, ClipVault AI, and TradingX  alongside custom AI services across voice automation, company AI, chatbots, and database intelligence.</p>
+        <p>We build five product lines including WinPilot AI, WinHeart AI, ClipVault AI, WinQor, and TradingX, alongside custom AI services across voice automation, company AI, chatbots, and database intelligence.</p>
         <div class="about-stats">
-          <div class="stat-box"><div class="stat-n">4</div><div class="stat-l">Product lines</div></div>
+          <div class="stat-box"><div class="stat-n">5</div><div class="stat-l">Product lines</div></div>
           <div class="stat-box"><div class="stat-n">~75%</div><div class="stat-l">TradingX accuracy</div></div>
           <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">AI service areas</div></div>
           <div class="stat-box"><div class="stat-n">100%</div><div class="stat-l">Client focused</div></div>
@@ -827,7 +835,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
   <div class="wrap">
     <span class="lbl rv">Our products</span>
     <h2 class="sec-h2 rv">Flagship AI systems</h2>
-    <p class="sec-p rv">Four focused products for Windows productivity, PC health, private clip management, and market intelligence.</p>
+    <p class="sec-p rv">Five focused product lines spanning Windows productivity, PC health, private clip management, compact AI models, and market intelligence.</p>
     <div class="prod-grid">
       <div class="prod-card rv" onclick="go('winpilot')">
         <div class="prod-hdr"><div class="prod-tag">Desktop AI · Flagship</div><div class="prod-name">WinPilot AI</div><div class="prod-desc">A unified Windows AI workspace for voice, text, documents, images, and productivity workflows.</div></div>
@@ -837,18 +845,25 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <div class="prod-ft"><span class="prod-ft-lnk">View full details →</span></div>
       </div>
       <div class="prod-card rv" onclick="go('winheart')">
-        <div class="prod-hdr"><div class="prod-tag">Windows assistant · Early launch</div><div class="prod-name">WinHeart AI</div><div class="prod-desc">A local-first PC health assistant that diagnoses, repairs, and protects your Windows system.</div><div class="promo-chip">Free for a limited time</div></div>
+        <div class="prod-hdr"><div class="prod-tag">Windows assistant · Early launch</div><div class="prod-name">WinHeart AI</div><div class="prod-desc">A local-first Windows companion for PC diagnosis, system health, repair guidance, change tracking, quick notes, and practical privacy controls in one workspace.</div><div class="promo-chip">Free for a limited time</div></div>
         <img class="prod-shot" src="winheart-dashboard.png" alt="WinHeart AI dashboard screenshot">
-        <ul class="prod-feats"><li>AI diagnosis and system health checks</li><li>PC repair, network, startup, and storage diagnostics</li><li>Local controls, repair history, and privacy settings</li></ul>
+        <ul class="prod-feats"><li>Live CPU, RAM, disk, startup, network, and health checks</li><li>Guided diagnostics for repair, Bluetooth, audio, storage, services, and updates</li><li>Change comparison, repair history, voice assistance, quick notes, and report export</li><li>Local data controls with optional online AI assistance</li></ul>
         <div class="prod-pills-row"><span class="prod-pill-tag">Early launch</span><span class="prod-pill-tag">Local-first</span><span class="prod-pill-tag">Windows</span></div>
         <div class="prod-ft"><span class="prod-ft-lnk">Explore WinHeart AI →</span></div>
       </div>
       <div class="prod-card rv" onclick="go('clipvault')">
-        <div class="prod-hdr"><div class="prod-tag">Private workspace · Launching soon</div><div class="prod-name">ClipVault AI</div><div class="prod-desc">A local workspace for capturing, searching, organising, and protecting screenshots, text, links, and files.</div><div class="promo-chip launch-chip">Launching Soon</div></div>
+        <div class="prod-hdr"><div class="prod-tag">Windows workspace · Live now</div><div class="prod-name">ClipVault AI</div><div class="prod-desc">An intelligent local workspace that captures clipboard history, screenshots, text, links, and files, then helps you search, organise, understand, and safely clean them.</div><div class="promo-chip">Free for a limited time</div></div>
         <img class="prod-shot" src="clipvault-home.png" alt="ClipVault AI private workspace with recent clips and quick capture tools">
-        <ul class="prod-feats"><li>Quick capture for screenshots, text, links, and files</li><li>Local AI summaries, matching, insights, and screenshot text recognition</li><li>Private storage, smart cleanup, backups, tags, pinning, and search</li></ul>
-        <div class="prod-pills-row"><span class="prod-pill-tag">Launching soon</span><span class="prod-pill-tag">Local-first</span><span class="prod-pill-tag">Windows</span></div>
-        <div class="prod-ft"><span class="prod-ft-lnk">Explore ClipVault AI →</span></div>
+        <ul class="prod-feats"><li>Fast capture with searchable clipboard history and a unified clip library</li><li>Local summaries, similar-clip matching, topic insights, and screenshot text recognition</li><li>Duplicate detection and smart cleanup with review and confirmation controls</li><li>Private storage, PIN protection, tags, backups, restore, export, and retention tools</li></ul>
+        <div class="prod-pills-row"><span class="prod-pill-tag">Live on Microsoft Store</span><span class="prod-pill-tag">Local-first</span><span class="prod-pill-tag">Windows</span></div>
+        <div class="prod-ft"><span class="prod-ft-lnk">Explore and download ClipVault AI →</span></div>
+      </div>
+      <div class="prod-card rv" onclick="go('winqor')">
+        <div class="prod-hdr"><div class="prod-tag">AI model family · Releasing soon</div><div class="prod-name">WinQor</div><div class="prod-desc">An upcoming family of compact AI models planned in three sizes, giving developers and products a practical choice across lightweight, balanced, and more capable workloads.</div><div class="promo-chip launch-chip">Releasing Soon</div></div>
+        <div class="model-showcase" aria-label="WinQor planned model sizes"><div class="model-chip-card"><span class="model-size">150M</span><span class="model-state">Planned</span></div><div class="model-chip-card"><span class="model-size">300M</span><span class="model-state">Planned</span></div><div class="model-chip-card"><span class="model-size">1B</span><span class="model-state">Planned</span></div></div>
+        <ul class="prod-feats"><li>Three planned sizes for different compute and deployment needs</li><li>Designed for efficient local, edge, and integrated AI experiences</li><li>Release formats, capabilities, and benchmarks will be announced closer to launch</li></ul>
+        <div class="prod-pills-row"><span class="prod-pill-tag">150M</span><span class="prod-pill-tag">300M</span><span class="prod-pill-tag">1B</span></div>
+        <div class="prod-ft"><span class="prod-ft-lnk">Explore WinQor →</span></div>
       </div>
       <div class="prod-card rv" onclick="go('tradingx')">
         <div class="prod-hdr"><div class="prod-tag">AI Trading Agent</div><div class="prod-name">TradingX</div><div class="prod-desc">Real-time market intelligence for currencies, gold, and BTC with directional prediction models.</div></div>
@@ -951,7 +966,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <span class="lbl rv">Why khanaitechnologies</span>
     <h2 class="sec-h2 rv">The right choice for serious AI work</h2>
     <div class="why-grid">
-      <div class="why-card rv"><div class="why-num">01</div><h3>Ships working products</h3><p>WinPilot AI and TradingX are live products, WinHeart AI is in early launch, and ClipVault AI is launching soon.</p></div>
+      <div class="why-card rv"><div class="why-num">01</div><h3>Ships working products</h3><p>WinPilot AI and ClipVault AI are live, WinHeart AI is in early launch, and the WinQor model family is on the release roadmap.</p></div>
       <div class="why-card rv"><div class="why-num">02</div><h3>Privacy by design</h3><p>Local-first execution. Your data stays on your hardware unless you explicitly choose otherwise.</p></div>
       <div class="why-card rv"><div class="why-num">03</div><h3>No outsourcing</h3><p>You work directly with our engineering team  no agencies, no middlemen, no delays.</p></div>
       <div class="why-card rv"><div class="why-num">04</div><h3>Model flexibility</h3><p>Not locked to one AI provider  GPT-4, Gemini, Claude, or local models per use case.</p></div>
@@ -970,7 +985,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
       <div class="rv">
         <span class="lbl">Contact</span>
         <h2 class="ct-info">Let's build<br>something.</h2>
-        <p>Have a project? Want to learn more about WinPilot AI, WinHeart AI, ClipVault AI, or TradingX? Reach out.</p>
+        <p>Have a project? Want to learn more about WinPilot AI, WinHeart AI, ClipVault AI, WinQor, or TradingX? Reach out.</p>
         <div class="ct-methods">
           <a href="https://wa.me/916303716492" target="_blank" class="ct-method">
             <div class="ct-ico">📱</div><div class="ct-txt"><h4>WhatsApp</h4><p>+91 6303716492</p></div>
@@ -1003,7 +1018,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <img src="data:image/png;base64,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" alt="WinPilot" style="width:30px;height:30px;border-radius:7px;object-fit:cover">
         khanaitechnologies
       </div>
-      <p class="ft-desc">AI engineering company  WinPilot AI, WinHeart AI, ClipVault AI, TradingX, Voice AI, Company AI, Chatbots, Database Intelligence.</p>
+      <p class="ft-desc">AI engineering company building WinPilot AI, WinHeart AI, ClipVault AI, WinQor, TradingX, Voice AI, Company AI, Chatbots, and Database Intelligence.</p>
       <div class="ft-soc">
         <a href="#" class="ft-sl">in</a>
         <a href="#" class="ft-sl">gh</a>
@@ -1025,6 +1040,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
         <li><span onclick="go('winpilot')">WinPilot AI</span></li>
         <li><span onclick="go('winheart')">WinHeart AI</span></li>
         <li><span onclick="go('clipvault')">ClipVault AI</span></li>
+        <li><span onclick="go('winqor')">WinQor</span></li>
         <li><span onclick="go('tradingx')">TradingX</span></li>
         <li><span onclick="go('service-voice')">Voice AI</span></li>
         <li><span onclick="go('service-chatbot')">Chatbots</span></li>
@@ -1069,13 +1085,16 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 
 <div id="page-winheart" class="inner"><div class="wrap">
   <button class="btn-back" onclick="go('home')">← Back</button>
-  <div class="pg-top"><span class="lbl">Windows assistant · Early launch</span><h1>WinHeart AI</h1><p>Diagnose. Fix. Protect. WinHeart AI is a local-first Windows assistant for practical PC health checks, repair guidance, and system privacy controls.</p><div class="promo-chip">Free for a limited time</div></div>
-  <div class="promo-panel"><div><h3>Download WinHeart AI free</h3><p>Get WinHeart AI 1.0.0 for Windows at no cost during the limited-time early launch.</p></div><a class="btn btn-solid" href="WinHeartAI-Setup-1.0.0.exe" download>Download for Windows ↓</a></div>
+  <div class="pg-top"><span class="lbl">Windows assistant · Early launch</span><h1>WinHeart AI</h1><p>Diagnose. Fix. Protect. WinHeart AI brings PC health, guided repair, change tracking, productivity tools, and privacy controls into one local-first Windows assistant.</p><div class="promo-chip">Free for a limited time</div></div>
+  <div class="promo-panel"><div><h3>Limited-time launch offer: download free</h3><p>Get WinHeart AI 1.0.0 for Windows at no cost during the early launch. The offer is available for a limited time.</p></div><a class="btn btn-solid" href="WinHeartAI-Setup-1.0.0.exe" download>Download for Windows ↓</a></div>
   <div class="media-hero"><img src="winheart-dashboard.png" alt="WinHeart AI dashboard with system overview"></div>
+  <div class="product-intro"><p>WinHeart AI helps you understand what is happening on your PC before you act. Review live system information, run focused checks, compare changes, follow supported repair guidance, keep quick notes, and export diagnosis reports from one Windows workspace. Online assistance is optional, while local data and privacy controls stay visible and accessible.<strong>One place to diagnose issues, review evidence, and make informed fixes.</strong></p></div>
   <div class="d-grid">
     <div class="dc"><div class="dc-lbl">Diagnosis</div><h3>Understand your PC</h3><p>AI Diagnose and System Health bring CPU, RAM, disk, temperature, startup, and network checks into one focused workspace.</p></div>
     <div class="dc"><div class="dc-lbl">Repair</div><h3>Work through supported fixes</h3><p>PC Repair organises network, Bluetooth, audio, performance, storage, startup, Windows services, and update diagnostics.</p></div>
     <div class="dc"><div class="dc-lbl">Control</div><h3>Keep local data in your hands</h3><p>Privacy settings cover online assistance, weather access, account visibility, purchase links, and local data export or deletion controls.</p></div>
+    <div class="dc"><div class="dc-lbl">Daily workspace</div><h3>Useful tools stay close</h3><p>Quick Actions, Quick Notes, voice assistance, system overview, and common checks help you move from a question to the right diagnostic without leaving the app.</p></div>
+    <div class="dc"><div class="dc-lbl">Evidence and history</div><h3>See what changed</h3><p>Compare system snapshots, review repair history, and export reports so you can understand the evidence behind a diagnosis and keep a record of the work.</p></div>
     <div class="dc"><div class="dc-lbl">Availability</div><h3>Early launch</h3><p>WinHeart AI is available to download free for a limited time during its early launch.</p><div class="dc-badge">Free for a limited time · Windows</div></div>
   </div>
   <div class="media-block"><span class="lbl">Product screenshots</span><div class="media-grid media-grid-three"><img src="winheart-dashboard.png" alt="WinHeart AI dashboard"><img src="winheart-repair.png" alt="WinHeart AI PC Repair screen"><img src="winheart-settings.png" alt="WinHeart AI privacy settings screen"></div></div>
@@ -1086,9 +1105,10 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 
 <div id="page-clipvault" class="inner"><div class="wrap">
   <button class="btn-back" onclick="go('home')">← Back</button>
-  <div class="pg-top"><img class="product-mark" src="clipvault-logo.png" alt="ClipVault AI logo"><span class="lbl">Private workspace · Launching soon</span><h1>ClipVault AI</h1><p>Capture, search, organise, and protect your screenshots, text, links, and files in one local Windows workspace.</p><div class="promo-chip launch-chip">Launching Soon</div></div>
+  <div class="pg-top"><img class="product-mark" src="clipvault-logo.png" alt="ClipVault AI logo"><span class="lbl">Windows workspace · Live on Microsoft Store</span><h1>ClipVault AI</h1><p>Capture, search, organise, understand, and protect your clipboard history, screenshots, text, links, and files in one intelligent local Windows workspace.</p><div class="promo-chip">Free for a limited time</div></div>
+  <div class="promo-panel"><div><h3>ClipVault AI is live and free for a limited time</h3><p>Download the official Windows app from Microsoft Store and start building a private, searchable library of the information you use every day.</p></div><a class="btn btn-solid" href="https://apps.microsoft.com/detail/9NV4L13DRKD0?hl=en-us&amp;gl=IN&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Download on Microsoft Store →</a></div>
   <div class="media-hero"><img src="clipvault-home.png" alt="ClipVault AI home workspace with quick capture, recent clips, details, and quick tools"></div>
-  <div class="product-intro"><p>Every day, we copy, capture, and save information. Finding it again should not be difficult. ClipVault AI is an intelligent workspace for your clipboard history, screenshots, text, links, and files. Capture effortlessly. Organize intelligently. Search with AI. Detect duplicates, extract text, summarize content, and access what matters in seconds.<strong>ClipVault AI. Capture More. Search Smarter. Stay Organized.</strong></p></div>
+  <div class="product-intro"><p>Every day, we copy, capture, and save information. Finding it again should not be difficult. ClipVault AI turns scattered clipboard items and saved content into a structured workspace you can search and manage. Capture effortlessly, organise intelligently, extract text from screenshots, summarize content, find related clips, detect duplicates, review cleanup suggestions, and reach what matters in seconds.<strong>ClipVault AI. Capture More. Search Smarter. Stay Organized.</strong></p></div>
   <div class="d-grid">
     <div class="dc"><div class="dc-lbl">Quick capture</div><h3>Save what matters fast</h3><p>Capture screenshots, text, and links with keyboard shortcuts, add files, or send content into Smart Organize.</p></div>
     <div class="dc"><div class="dc-lbl">Clipboard</div><h3>Your clips in one searchable library</h3><p>Keep automatic history for text, links, images, and files with search, copy, paste, pinning, saved clips, multiple selection, and a quick queue.</p></div>
@@ -1098,7 +1118,21 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
     <div class="dc"><div class="dc-lbl">Privacy and backup</div><h3>Local controls for your workspace</h3><p>Use local encrypted content, an app PIN, sensitive-content protection, expiry and clipboard clearing, ignored-app controls, scheduled backups, restore, export, import, retention, and separate workspaces.</p></div>
   </div>
   <div class="media-block"><span class="lbl">Real product screenshots</span><div class="media-grid media-grid-three"><img src="clipvault-home.png" alt="ClipVault AI home and recent clips"><img src="clipvault-library.png" alt="ClipVault AI links library and clip details"><img src="clipvault-features.png" alt="ClipVault AI features including local AI, clipboard, screenshots, cleanup, privacy, and backup"></div></div>
-  <div style="text-align:center"><span class="promo-chip launch-chip">ClipVault AI is launching soon</span></div>
+  <div class="product-intro"><p>The home workspace keeps quick capture, recent clips, folders, details, and smart tools visible together. The library groups screenshots, text, links, and files with search, filters, tags, saved items, and pinning. Feature controls cover local AI tools, cleanup review, private storage, expiry, scheduled backups, restore, import, export, and separate workspaces.<strong>Your everyday information stays organised, searchable, and under your control.</strong></p></div>
+  <div style="text-align:center"><a class="btn btn-solid" href="https://apps.microsoft.com/detail/9NV4L13DRKD0?hl=en-us&amp;gl=IN&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Download ClipVault AI free →</a></div>
+</div></div>
+
+<div id="page-winqor" class="inner"><div class="wrap">
+  <button class="btn-back" onclick="go('home')">← Back</button>
+  <div class="pg-top"><span class="lbl">AI model family · Releasing soon</span><h1>WinQor</h1><p>WinQor is an upcoming family of compact AI models planned in 150 million, 300 million, and 1 billion parameter editions, offering clear options for different compute budgets and product needs.</p><div class="promo-chip launch-chip">Releasing Soon</div></div>
+  <div class="product-intro"><p>The WinQor roadmap is built around choice. The smaller planned editions target efficient, low-footprint use, while the larger edition is intended for workloads that benefit from additional capacity. Final capabilities, supported formats, hardware requirements, benchmarks, and release dates will be published closer to availability.<strong>Three planned sizes. One model family. Built for practical deployment choices.</strong></p></div>
+  <div class="model-showcase" aria-label="WinQor model roadmap"><div class="model-chip-card"><span class="model-size">150M</span><span class="model-state">Releasing soon</span></div><div class="model-chip-card"><span class="model-size">300M</span><span class="model-state">Releasing soon</span></div><div class="model-chip-card"><span class="model-size">1B</span><span class="model-state">Releasing soon</span></div></div>
+  <div class="d-grid" style="margin-top:2rem">
+    <div class="dc"><div class="dc-lbl">WinQor 150M</div><h3>Compact planned edition</h3><p>The smallest announced WinQor edition, intended for lightweight local, edge, and embedded AI scenarios where resource efficiency matters.</p><div class="dc-badge">150 million parameters · Planned</div></div>
+    <div class="dc"><div class="dc-lbl">WinQor 300M</div><h3>Balanced planned edition</h3><p>A middle option intended to balance footprint and capability for assistants, integrated features, and intelligent workflow automation.</p><div class="dc-badge">300 million parameters · Planned</div></div>
+    <div class="dc"><div class="dc-lbl">WinQor 1B</div><h3>Largest announced edition</h3><p>The largest model in the announced family, intended for richer workloads that can use additional model capacity and context.</p><div class="dc-badge">1 billion parameters · Planned</div></div>
+    <div class="dc"><div class="dc-lbl">Roadmap</div><h3>More details coming</h3><p>All three editions are releasing soon. Official capability details, evaluations, deployment formats, system requirements, and availability will be shared as the release approaches.</p><div class="dc-badge">Development roadmap</div></div>
+  </div>
 </div></div>
 
 <div id="page-tradingx" class="inner">
@@ -1283,7 +1317,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); }
 <!-- ════════ CONTACT PAGE ════════ -->
 <div id="page-contact" class="inner"><div class="wrap">
   <button class="btn-back" onclick="go('home')">← Back</button>
-  <div class="pg-top"><span class="lbl">Contact</span><h1>Let's build together</h1><p>Ready to deploy AI for your business? Have a question about WinPilot AI or TradingX? Reach out to our team.</p></div>
+  <div class="pg-top"><span class="lbl">Contact</span><h1>Let's build together</h1><p>Ready to deploy AI for your business? Have a question about WinPilot AI, WinHeart AI, ClipVault AI, WinQor, or TradingX? Reach out to our team.</p></div>
   <div class="ct-grid">
     <div>
       <span class="lbl">Get in touch</span>
@@ -1356,6 +1390,7 @@ const PAGES = {
   'winpilot':           'page-winpilot',
   'winheart':           'page-winheart',
   'clipvault':          'page-clipvault',
+  'winqor':             'page-winqor',
   'tradingx':           'page-tradingx',
   'service-voice':      'page-service-voice',
   'service-company-ai': 'page-service-company-ai',
@@ -1373,7 +1408,8 @@ const TITLES = {
   'home': 'khanaitechnologies',
   'winpilot': 'WinPilot AI  khanaitechnologies',
   'winheart': 'WinHeart AI  Early launch',
-  'clipvault': 'ClipVault AI  Launching soon',
+  'clipvault': 'ClipVault AI  Live on Microsoft Store',
+  'winqor': 'WinQor  Releasing soon',
   'tradingx': 'TradingX  khanaitechnologies',
   'service-voice': 'AI Voice Assistants  khanaitechnologies',
   'service-company-ai': 'Company AI  khanaitechnologies',
