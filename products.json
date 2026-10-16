@@ -52,7 +52,7 @@
       "name": "WinHeart AI",
       "tagline": "Diagnose. Fix. Protect.",
       "status": "live",
-      "store_url": "https://apps.microsoft.com/detail/9P6M976T1XTS?hl=en-us&gl=IN&ocid=pdpshare",
+      "store_url": "{{TODO:winheart_store_url}}",
       "download_url": "WinHeartAI-Setup-1.0.0.exe",
       "description": "A local-first Windows assistant for practical PC health checks, repair guidance, change tracking, quick notes, and system privacy controls.",
       "features": [
