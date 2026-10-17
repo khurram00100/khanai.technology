@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khurram00100.github.io/khanai.technology/sitemap.xml
