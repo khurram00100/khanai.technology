@@ -10,3 +10,11 @@
 /solutions.html linguist-generated=true
 /company.html linguist-generated=true
 /contact.html linguist-generated=true
+
+# Legal-policy pages are documentation, not application source code.
+/privacy.html linguist-documentation=true
+/terms.html linguist-documentation=true
+/refund.html linguist-documentation=true
+/winheart-privacy.html linguist-documentation=true
+/winheart-terms.html linguist-documentation=true
+/winheart-refund.html linguist-documentation=true
