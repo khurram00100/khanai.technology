@@ -1,0 +1,12 @@
+# These public HTML files are deterministic build outputs from build_site.py.
+/index.html linguist-generated=true
+/404.html linguist-generated=true
+/products.html linguist-generated=true
+/winpilot.html linguist-generated=true
+/winheart.html linguist-generated=true
+/clipvault.html linguist-generated=true
+/winqor.html linguist-generated=true
+/tradingx.html linguist-generated=true
+/solutions.html linguist-generated=true
+/company.html linguist-generated=true
+/contact.html linguist-generated=true
